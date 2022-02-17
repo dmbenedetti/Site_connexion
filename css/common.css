@@ -1,0 +1,973 @@
+.videos_progametes {
+    left: 50%; transform: translateX(-50%); position: relative;
+}
+
+#ContentPlaceHolder1_DataPager1 {
+    clear:both;
+}
+
+#btnbuscarmoblie {
+    display: none;
+    visibility: hidden;
+    width: 200px;
+    color: white;
+    z-index: 629;
+    position: absolute;
+    vertical-align: middle;
+    left: 15px;
+    cursor: pointer;
+    top: 2px;
+    z-index: 990;
+    /*position: fixed;*/
+}
+
+    #conteudo #banners #banner22 {
+        display: none;
+    }
+    #conteudo #banners #banner21 {
+        display:none;
+    }
+    #conteudo #banners #banner32 {
+        display: none;
+    }
+    #conteudo #banners #banner31 {
+        display:none;
+    }
+h2.accordion {
+    cursor: pointer;
+    font-size: 12px;
+    border-bottom: initial;
+    text-align: left;
+    color: RGB(162,160,161);
+    padding: 5px 0px;
+    font-weight:normal;
+}
+
+h2.accordion a {
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    border-bottom: initial;
+    text-align: left;
+    color: RGB(162,160,161);
+}
+
+div.accordion {
+    display: none;
+    padding-bottom: 10px;
+}
+
+div.accordion ul li {
+    text-align: left;
+    list-style: none;
+    line-height: 1;
+    padding: 6px 0px;
+    margin-left: 10px;
+}
+
+div.accordion ul li a {
+    text-decoration: none;
+    color: RGB(162,160,161);
+    font-size: 11px;
+}
+
+#footer_mobile {
+    padding: 10px 0px 0px 0px;
+    background: #FFF;
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+    visibility: hidden;
+}
+
+#footer_menu_mobile {
+    padding: 10px 0px 10px 0px;
+    background: #FFF;
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+    visibility: hidden;
+}
+
+.programetesdiscovery {
+    width: 100%;
+}
+
+@media all and (max-width: 800px) {
+
+    #ContentPlaceHolder1_DataPager1 span {
+        padding: 7px 10px;
+    }
+    #ContentPlaceHolder1_DataPager1 a {
+        padding: 7px 10px;
+    }
+
+
+    .btnPrimario{
+        font-size: 12px;
+    }
+    .botao2 {
+        font-size: 12px;
+    }
+
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .rslides img {
+        height: auto;
+        width: 100%;
+    }
+
+    #geral_menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .progamenteprincipal {
+        width: 100%;
+        max-width: 540px;
+        max-height: 315px;
+        height: 200px;
+    }
+
+    .suasaudeimg {
+        width: 60px;
+       height: 55px;
+    }
+
+    .podcast {
+        min-height: 80px;
+    }
+    .selectDefault {
+        width: 220px;
+    }
+
+    #ContentPlaceHolder1_ListView1_ItemDataPager {
+        font-size: 30px;
+        font-family: 'Roboto', Arial, serif;
+        font-weight: 300;
+        color: #666;
+        font-weight: initial;
+        float:left;
+    }
+    .text_field {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #ContentPlaceHolder1_ListView1_ItemDataPager a {
+       color: #3696da;
+        text-decoration: none;
+    }
+    
+    .list_detail {
+        display:none;
+    }
+
+    .unidades_hosp {
+        width: 100%;
+    }
+
+    #table_contato {
+        width: 100%
+    }
+
+    #conteudo {
+        min-height: inherit;
+        max-width: 940px;
+        width: 100%;
+        padding: 10px 0px 0px 0px;
+        clear: both;
+    }
+
+   #conteudo_padding {
+        padding: 0px 4px 0px 4px;
+    }
+
+
+    #conteudo #slider {
+        height: auto;
+        max-width: 940px;
+        width: 100%;
+    }
+
+    #conteudo #news {
+        width: 100%;
+        max-width: 940px;
+    }
+
+    #conteudo #news #noticias {
+        width: 100%;
+    }
+ 
+       #btnbuscarmoblie {
+        display: block;
+        visibility: visible;
+        z-index: 990;
+        /*position: fixed;*/
+    }
+
+    .link_noticias_home_titulo {
+        width: 100%;
+    }
+    
+    #saudacao {
+        display: none;
+        visibility: hidden;
+    }
+
+    #topo {
+        margin-top: 32px;
+    }
+
+    #topo h1 {
+        height: 95px;
+    }
+    #topo h1 a img {
+        width: 130px;
+    padding-top: 15px
+    }
+
+    #btnSearch {
+        width: 28px;
+        height: 25px;
+        margin: 0 20px 0 5px;
+        float: left;
+        position: absolute;
+        z-index: 991;
+        top: 57px;
+        left: 259px;
+        display: none;
+        visibility: hidden;
+    }
+
+    #search {
+        width: calc(100% - 40px);
+        height: 30px;
+        margin-right: 20px;
+        float: left;
+        position: absolute;
+        z-index: 990;
+        background: rgb(0, 70, 127);
+        top: 44px;
+        left: 0px;
+        padding: 10px 20px;
+        display: none;
+        visibility: hidden;
+    }
+
+    #socialIcons {
+        display: none;
+    }
+
+    .noticias_home {
+        border-bottom: initial;
+        width: 100%;
+    }
+
+    #NoticiaMobile {
+        width: calc(100% - 80px);
+        float:left;
+    }
+
+    #conteudo #news #releases {
+        width: 100%;
+    }
+
+    .releases_home {
+        width: 100%;
+    }
+
+    .link_releases_home_titulo {
+        width: 100%;
+    }
+
+    .item_mobile {
+        padding: 0px 6px;
+    }
+
+    #twitter {
+        clear: both;
+        padding-top: 10px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+    }
+
+    #youtube {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+
+    }
+    #facebook {
+        width: 293px;
+        float: left;
+        clear: both;
+        padding-top: 23px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+    }
+
+    #redes_sociais {
+        width: 100%;
+    }
+
+    #menu_footer {
+        display: none;
+    }
+
+    #footer_menu_mobile {
+        visibility: visible;
+        display: block;
+    }
+    #footer_mobile {
+        visibility: visible;
+        display: block;
+        height: 80px;
+    }
+
+    #rodape {
+        width: 100%;
+    }
+
+    #rodape #copyright {
+        width: 100%;
+    }
+
+    #conteudo #news #newsletter {
+        width: 100%;
+    }
+
+    #icone_newsletter {
+        width: 55px;
+    }
+
+    #titulo_newsletter {
+        width: auto;
+    }
+
+    #titulo_newsletter table tr td 
+    {
+        width: auto;
+    }
+    #titulo_newsletter p {
+        font: 16px "Myriad Pro", Arial, Verdana;
+        color: #3497DA;
+    }
+
+    #txt_newsletter {
+        width: 140px;
+    }
+    #menuApoio {
+        width: auto;
+
+    }
+    #topo {
+        width:auto;
+    }   
+    #rodape #logo_footer {
+        display: none;
+    }
+    .curso1 {
+        width: 90px;
+    }
+    .curso2 {
+        width: 116px;
+    }
+    .campanhas_front h3 {
+        font-size: 15px;
+    }
+
+    #conteudo #banners #banner2 {
+        display: none;
+    }
+    #conteudo #banners #banner1 {
+        display:none;
+    }
+    #conteudo #banners #banner3 {
+        display: none;
+    }
+    #conteudo #banners #banner4 {
+        display:none;
+    }
+    #conteudo #banners #banner31 {
+        display:block;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    #conteudo #banners #banner32 
+    {
+        display: block;
+        width:100%;
+    }
+    #conteudo #banners #banner31 img {
+        width: 100%;
+    }
+
+    #conteudo #banners #banner32 img {
+        width: 100%;
+    }
+    #conteudo #banners #banner22 {
+        display: none;
+    }
+    #conteudo #banners #banner21 {
+        display:none;
+    }
+
+    #conteudo #news #noticias .leia_mais a {
+        width:auto;
+    }
+    #dtl_noticias {
+        margin: 0px;
+        width: 100%;
+    }
+}
+
+@media all and (max-device-width: 800px) {
+    #dtl_noticias {
+        margin: 0px;
+        width: 100%;
+    }
+
+    #conteudo #news #noticias .leia_mais a {
+        width:auto;
+    }
+    #conteudo #banners #banner2 {
+        display: none;
+    }
+    #conteudo #banners #banner1 {
+        display:none;
+    }
+    #conteudo #banners #banner3 {
+        display: none;
+    }
+    #conteudo #banners #banner4 {
+        display:none;
+    }
+    #conteudo #banners #banner31 {
+        display:block;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    #conteudo #banners #banner32 
+    {
+        display: block;
+        width:100%;
+    }
+    #conteudo #banners #banner31 img {
+        width: 100%;
+    }
+
+    #conteudo #banners #banner32 img {
+        width: 100%;
+    }
+    #conteudo #banners #banner22 {
+        display: none;
+    }
+    #conteudo #banners #banner21 {
+        display:none;
+    }
+
+
+    .campanhas_front h3 {
+        font-size: 15px;
+    }
+    .curso1 {
+        width: 90px;
+    }
+    .curso2 {
+        width: 116px;
+    }
+    .btnPrimario{
+        font-size: 12px;
+    }
+    .botao2 {
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    #geral_menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    .rslides img {
+        height: auto;
+        width: 100%;
+    }
+    .progamenteprincipal {
+        width: 100%;
+        max-width: 540px;
+        max-height: 315px;
+        height: 200px;
+    }
+
+    .programetesdiscovery {
+        width: 100%;
+    }
+
+    .suasaudeimg {
+        width: 60px;
+       height: 55px;
+    }
+
+    .podcast {
+        min-height: 80px;
+    }
+    .selectDefault {
+        width: 220px;
+    }
+
+    #ContentPlaceHolder1_ListView1_ItemDataPager {
+        font-size: 30px;
+        font-family: 'Roboto', Arial, serif;
+        font-weight: 300;
+        color: #666;
+        font-weight: initial;
+        float:left;
+    }
+    .text_field {
+        width: 100%;
+        max-width: 300px;
+    }
+    #ContentPlaceHolder1_ListView1_ItemDataPager a {
+       color: #3696da;
+        text-decoration: none;
+    }
+    
+    .list_detail {
+        display:none;
+    }
+
+    .unidades_hosp {
+        width: 100%;
+    }
+
+    #table_contato {
+        width: 100%
+    }
+
+    #conteudo {
+        min-height: inherit;
+        max-width: 940px;
+        width: 100%;
+        padding: 10px 0px 0px 0px;
+        clear: both;
+    }
+
+   #conteudo_padding {
+        padding: 0px 4px 0px 4px;
+    }
+
+    #conteudo #slider {
+        height: auto;
+        max-width: 940px;
+        width: 100%;
+    }
+
+    
+    #conteudo #news {
+        width: 100%;
+        max-width: 940px;
+    }
+
+    #conteudo #news #noticias {
+        
+        width: 100%;
+    }
+ 
+       #btnbuscarmoblie {
+        display: block;
+        visibility: visible;
+        z-index: 990;
+        /*position: fixed;*/
+    }
+
+    .link_noticias_home_titulo {
+        width: 100%;
+    }
+    
+    #saudacao {
+        display: none;
+        visibility: hidden;
+    }
+
+    #topo {
+        margin-top: 32px;
+    }
+
+    #topo h1 {
+        height: 95px;
+    }
+        #topo h1 a img {
+       width: 130px;
+    padding-top: 15px
+    }
+
+    #btnSearch {
+        width: 28px;
+        height: 25px;
+        margin: 0 20px 0 5px;
+        float: left;
+        position: absolute;
+        z-index: 991;
+        top: 57px;
+        left: 259px;
+        display: none;
+        visibility: hidden;
+    }
+
+    #search {
+        width: calc(100% - 40px);
+        height: 30px;
+        margin-right: 20px;
+        float: left;
+        position: absolute;
+        z-index: 990;
+        background: rgb(0, 70, 127);
+        top: 44px;
+        left: 0px;
+        padding: 10px 20px;
+        display: none;
+        visibility: hidden;
+    }
+
+    #socialIcons {
+        display: none;
+    }
+
+    .noticias_home {
+        border-bottom: initial;
+        width: 100%;
+    }
+
+    #NoticiaMobile {
+        width: calc(100% - 80px);
+        float:left;
+    }
+
+    #conteudo #news #releases {
+        width: 100%;
+    }
+
+    .releases_home {
+        width: 100%;
+    }
+
+    .link_releases_home_titulo {
+        width: 100%;
+    }
+
+    .item_mobile {
+        padding: 0px 6px;
+    }
+
+    #twitter {
+        clear: both;
+        padding-top: 10px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+
+    }
+
+    #youtube {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+
+    }
+    #facebook {
+        width: 293px;
+        float: left;
+        clear: both;
+        padding-top: 23px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        -webkit-transition: translateX(-50%);
+        -moz-transition: translateX(-50%);
+        -o-transition: translateX(-50%);
+    }
+
+    #redes_sociais {
+        width: 100%;
+    }
+
+    #menu_footer {
+        display: none;
+    }
+
+    #footer_menu_mobile {
+        visibility: visible;
+        display: block;
+    }
+    #footer_mobile {
+        visibility: visible;
+        display: block;
+        height: 80px;
+    }
+
+    #rodape {
+        width: 100%;
+    }
+
+    #rodape #copyright {
+        width: 100%;
+    }
+
+    #conteudo #news #newsletter {
+        width: 100%;
+    }
+
+    #icone_newsletter {
+        width: 55px;
+    }
+
+    #titulo_newsletter {
+        width: auto;
+    }
+
+    #titulo_newsletter table tr td 
+    {
+        width: auto;
+    }
+    #titulo_newsletter p {
+        font: 16px "Myriad Pro", Arial, Verdana;
+        color: #3497DA;
+    }
+
+    #txt_newsletter {
+        width: 140px;
+    }
+    #menuApoio {
+        width: auto;
+
+    }
+    #topo {
+        width:auto;
+    }
+#rodape #logo_footer {
+    display: none;
+}
+}
+
+@media all and (max-device-width: 339px) {
+    #icone_newsletter {
+        margin: 45px 0 25px 5px;
+    }
+}
+@media all and (max-width: 339px) {
+    #icone_newsletter {
+        margin: 45px 0 25px 5px;
+    }
+
+}
+
+@media all and (max-width: 860px) and (min-width: 700px) {
+    #conteudo #banners #banner2 {
+        display: none;
+    }
+    #conteudo #banners #banner1 {
+        display:none;
+    }
+    #conteudo #banners #banner3 {
+        display: none;
+    }
+    #conteudo #banners #banner4 {
+        display:none;
+    }
+    #conteudo #banners #banner31 {
+        display: none;
+    }
+    #conteudo #banners #banner32 
+    {
+        display:none;
+    }
+    #conteudo #banners #banner22 {
+        display: block;
+        width:100%;
+        max-width: 220px;
+        float:left;
+        margin-left: 20px;
+        padding: 20px 0px;
+    }
+    #conteudo #banners #banner21 {
+        display:block;
+        width: calc(100% - 240px);
+        padding: 20px 0px;
+        float:left;
+    }
+    #conteudo #banners #banner21 img {
+        width: 100%;
+    }
+
+    #conteudo #banners #banner22 img {
+        width: 100%;
+    }
+
+   #conteudo {
+               min-height: inherit;
+
+        width: 100%;
+    }
+   #conteudo_padding {
+        padding: 10px;
+    }
+
+   #redes_sociais {
+       width:auto;
+       margin-left: calc((100% - 645px)/2);
+   }
+   #youtube {
+       display:none;
+   }
+    #twitter {
+        clear:initial;
+        padding-top: 0px;
+        margin-left: initial;
+        transform: initial;
+        padding-left: 0px;
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -o-transition: initial;
+    }
+    #facebook {
+        clear:initial;
+        padding-top: 0px;
+        margin-left: initial;
+        transform: initial;
+        padding-left: 10px;
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -o-transition: initial;
+    }
+ 
+}
+@media all and (max-device-width: 860px) and (min-device-width: 700px) {
+   #conteudo {
+        min-height: inherit;
+        width: 100%;
+    }
+   #conteudo_padding {
+        padding: 10px;
+    }
+
+    #conteudo #banners #banner2 {
+        display: none;
+    }
+    #conteudo #banners #banner1 {
+        display:none;
+    }
+    #conteudo #banners #banner3 {
+        display: none;
+    }
+    #conteudo #banners #banner4 {
+        display:none;
+    }
+    #conteudo #banners #banner31 {
+        display: none;
+    }
+    #conteudo #banners #banner32 
+    {
+        display:none;
+    }
+    #conteudo #banners #banner22 {
+        display: block;
+        width:100%;
+        max-width: 220px;
+        float:left;
+        margin-left: 20px;
+        padding: 20px 0px;
+    }
+    #conteudo #banners #banner21 {
+        display:block;
+        width: calc(100% - 240px);
+        padding: 20px 0px;
+        float:left;
+    }
+    #conteudo #banners #banner21 img {
+        width: 100%;
+    }
+
+    #conteudo #banners #banner22 img {
+        width: 100%;
+    }
+   #redes_sociais {
+       width:auto;
+       margin-left: calc((100% - 645px)/2);
+   }
+   #youtube {
+       display:none;
+   }
+    #twitter {
+        clear:initial;
+        padding-top: 0px;
+        margin-left: initial;
+        transform: initial;
+        padding-left: 0px;
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -o-transition: initial;
+    }
+    #facebook {
+        clear:initial;
+        padding-top: 0px;
+        margin-left: initial;
+        transform: initial;
+        padding-left: 10px;
+        -webkit-transition: initial;
+        -moz-transition: initial;
+        -o-transition: initial;
+    }
+ 
+}
+@media all and (max-device-width: 800px) {
+    .videos_progametes {
+        width: 686px;
+    }
+}
+@media all and (max-width: 800px) {
+    .videos_progametes {
+        width: 686px;
+    }
+}
+
+@media all and (max-device-width: 685px) {
+    .videos_progametes {
+        width: 457px;
+    }
+}
+@media all and (max-width: 685px) {
+    .videos_progametes {
+        width: 457px;
+    }
+}
+
+@media all and (max-device-width: 456px) {
+    .videos_progametes {
+        width: 220px;
+    }
+}
+@media all and (max-width: 456px) {
+    .videos_progametes {
+        width: 220px;
+    }
+}
+
