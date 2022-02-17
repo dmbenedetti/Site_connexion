@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+border:0;
+padding:0;
+margin:0;
+}
+body{
+font:12px Arial, Helvetica, sans-serif;
+color:#333333;
+}
+#geral{
+width:100%;
+}
+#topo{
+/*height:195px;*/
+margin:0 0 0 0;
+}
+#logo{
+float:left;
+width:150px;
+height:94px;
+}
+#usuario{
+float:right;
+margin:15px 20px 0 0;
+width:540px;
+text-align:right;}
+#idioma{
+float:right;
+margin:30px 5px 0 0;
+width:540px;
+text-align:right;
+clear:right;
+	}
+#box-cinza{
+	height:40px;
+	background:#666;
+	width:100%;
+	clear:both;
+	margin-top:90px;
+	text-align:right;
+}/*
+#box-cinza-claro{
+	height:40px;
+	background:#999;
+	width:100%;
+	clear:both;
+}
+*/
+#table-layout{
+	min-height:600px;
+	}
+#menu_left{
+width:190px;
+margin:0;
+padding:5px;
+bottom:0;
+}
+#conteudo{
+position:absolute;
+width:99.9%;
+height:88.5%;}
+#conteudo_right{
+padding:10px;
+}
+#menu_left ul li{
+list-style:none;
+margin:10px 5px;
+}
+#menu_left ul li a{
+color:#666666;
+text-decoration:none;}
+
+.txt
+{
+    border:solid 1px #333;
+    }           
+.btn{
+	padding:7px 12px;
+	color:#fff;
+	font-size:14px;
+	background-color:#666;
+}    
+.TituloSessao{
+	display:block;
+	padding:10px 5px;
+	color:#FFF;
+	background:#666;
+	text-align:center;
+	font:bold 16px Arial, Helvetica, sans-serif;
+}

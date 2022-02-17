@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="admincms_MasterPage" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="styles-master.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100px;
+        }
+    </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("[id*=chkAll]").bind("click", function () {
+                if ($(this).is(":checked")) {
+                    $("[id*=chb_hospitais] input").attr("checked", "checked");
+                } else {
+                    $("[id*=chb_hospitais] input").removeAttr("checked");
+                }
+            });
+            $("[id*=chb_hospitais] input").bind("click", function () {
+                if ($("[id*=chb_hospitais] input:checked").length == $("[id*=chb_hospitais] input").length) {
+                    $("[id*=chkAll]").attr("checked", "checked");
+                } else {
+                    $("[id*=chkAll]").removeAttr("checked");
+                }
+            });
+        });
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="geral">
+	<div id="topo">
+    	<h1 id="logo"><img src="images/logoRedeDor.jpg" /></h1>
+        <div id="usuario">
+        	<p>Usuário : &nbsp;<asp:Label ID="lbl_nome_user" runat="server"></asp:Label>
+&nbsp;&nbsp; |&nbsp;&nbsp;
+                <asp:ImageButton ID="btn_sair" runat="server" ImageUrl="images/btn_sair.jpg" 
+                    onclick="btn_sair_Click" />
+            </p>
+        </div>
+        <div id="idioma">
+        	<p>
+                <table align="right" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                <asp:Image ID="img_idioma" runat="server" Height="20px" Width="34px" />
+                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <asp:Label ID="lbl_idioma" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <asp:ImageButton ID="btn_idioma" runat="server" 
+                    ImageUrl="images/btn_idioma.jpg" PostBackUrl="~/admincms/idioma.aspx" />
+                        </td>
+                    </tr>
+                </table>
+&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+        <div id="box-cinza">
+            <br />
+        </div>
+        <div id="box-cinza-claro"></div>
+    </div>
+    <table width="100%" cellspacing="3px" height="100%" id="table-layout">
+		<tr>
+        	<td width="200" valign="top" align="left" style="border:solid 1px #CCCCCC;"">
+				<!--Menu Left-->
+				<div id="menu_left">
+                
+                    
+                    
+					
+				    <asp:DropDownList ID="drp_hospitais" 
+                                runat="server" CssClass="txt" Height="26px" Width="190px" OnSelectedIndexChanged="drp_hospitais_SelectedIndexChanged" AutoPostBack="True">
+                            </asp:DropDownList>
+                            <br />
+                            <br />
+                    <asp:Label ID="lbl_menu_portal" runat="server"></asp:Label>
+                    <asp:Label ID="lbl_menu_hosp" runat="server"></asp:Label>
+
+				</div>
+				<!-- Fim do Menu Left-->
+			</td>
+			<td bordercolor="#CCCCCC" style="border:solid 1px #CCCCCC;"  valign="top" align="left">
+				<!-- conteudo_right-->
+				<div id="conteudo_right">
+				    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+				</div>
+				<!--Fim conteudo_right-->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background:#E9E9E9; border:solid 1px #CCCCCC;" height="20px;">
+					<p>Desenvolvido por Connexion Net</p>
+			</td>
+		</tr>
+	</table>
+</div>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-17119718-1', 'auto');
+    ga('send', 'pageview');
+ 
+</script>        
+    </form>
+</body>
+</html>

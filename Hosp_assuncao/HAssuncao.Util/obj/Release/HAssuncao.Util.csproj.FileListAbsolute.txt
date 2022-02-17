@@ -1,0 +1,5 @@
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\bin\HAssuncao.Util.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\bin\HAssuncao.Util.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Release\HAssuncao.Util.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Release\HAssuncao.Util.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Release\HAssuncao.Util.pdb

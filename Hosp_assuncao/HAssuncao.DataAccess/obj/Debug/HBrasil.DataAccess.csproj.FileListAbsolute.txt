@@ -1,0 +1,7 @@
+E:\Hospital_Brasil\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.dll
+E:\Hospital_Brasil\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.pdb
+E:\Hospital_Brasil\HAssuncao.DataAccess\bin\HAssuncao.Models.dll
+E:\Hospital_Brasil\HAssuncao.DataAccess\bin\HAssuncao.Models.pdb
+E:\Hospital_Brasil\HAssuncao.DataAccess\obj\Debug\HAssuncao.DataAccess.csprojResolveAssemblyReference.cache
+E:\Hospital_Brasil\HAssuncao.DataAccess\obj\Debug\HAssuncao.DataAccess.dll
+E:\Hospital_Brasil\HAssuncao.DataAccess\obj\Debug\HAssuncao.DataAccess.pdb

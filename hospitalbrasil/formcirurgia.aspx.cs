@@ -1,0 +1,424 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Net; // importe o namespace .Net
+using System.Net.Mail; // importe o namespace .Net.Mail
+using System.Text;
+
+
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html;
+using iTextSharp.text.xml;
+using System.IO;
+using System.Collections.Generic;
+
+
+public partial class fale_conosco : System.Web.UI.Page
+{
+
+
+
+    public class procadimento
+    {
+        string cod;
+        string descricao;
+        int id;
+    }
+
+    public class equipamento
+    {
+        string cod;
+        string descricao;
+        int id;
+    }
+
+    public class material
+    {
+        string cod;
+        string fornecedor;
+        int quantidade;
+        int id;
+    }
+
+    private DataTable procedimentos;
+    private DataTable equipamentos;
+    private DataTable materiais;
+
+    private void DownloadAsPDF(MemoryStream ms)
+    {
+        string arquivo = "agendamento_" + DateTime.Now.ToString("dd-MM-yyyy");
+        Response.Clear();
+        Response.ClearContent();
+        Response.ClearHeaders();
+        Response.ContentType = "application/pdf";
+        Response.AppendHeader("Content-Disposition", "attachment;filename=" + arquivo + ".pdf");
+        Response.OutputStream.Write(ms.GetBuffer(), 0, ms.GetBuffer().Length);
+        Response.OutputStream.Flush();
+        Response.OutputStream.Close();
+        Response.End();
+        ms.Close();
+
+    }
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Page.IsPostBack)
+        {
+            procedimentos = (DataTable)Session["procedimentos"];
+            equipamentos = (DataTable)Session["equipamentos"];
+            materiais = (DataTable)Session["materiais"];
+
+        }
+        else
+        {
+            DataRow oRow;
+            procedimentos = new DataTable();
+            procedimentos.Columns.Add("id", System.Type.GetType("System.Int32"));
+            procedimentos.Columns.Add("cod", System.Type.GetType("System.String"));
+            procedimentos.Columns.Add("descricao", System.Type.GetType("System.String"));
+            oRow = procedimentos.NewRow();
+            oRow["id"] = 1;
+            procedimentos.Rows.Add(oRow);
+            
+            Session["procedimentos"] = procedimentos;
+            equipamentos = new DataTable();
+            equipamentos.Columns.Add("id", System.Type.GetType("System.Int32"));
+            equipamentos.Columns.Add("cod", System.Type.GetType("System.String"));
+            equipamentos.Columns.Add("descricao", System.Type.GetType("System.String"));
+            oRow = equipamentos.NewRow();
+            oRow["id"] = 1;
+            equipamentos.Rows.Add(oRow);
+            
+            Session["equipamentos"] = equipamentos;
+            materiais = new DataTable();
+            materiais.Columns.Add("id", System.Type.GetType("System.Int32"));
+            materiais.Columns.Add("cod", System.Type.GetType("System.String"));
+            materiais.Columns.Add("fornecedor", System.Type.GetType("System.String"));
+            materiais.Columns.Add("quantidade", System.Type.GetType("System.Int32"));
+            oRow = materiais.NewRow();
+            oRow["id"] = 1;
+            materiais.Rows.Add(oRow);
+            
+            Session["materiais"] = materiais;
+
+            rptProcedimentos.DataSource = procedimentos;
+            rptProcedimentos.DataBind();
+            rptEquipamento.DataSource = equipamentos;
+            rptEquipamento.DataBind();
+            rptMateriais.DataSource = materiais;
+            rptMateriais.DataBind();
+        }
+
+        int id = Convert.ToInt32(Request.QueryString["id"]);
+        DataSet1TableAdapters.tb_paginasTableAdapter paginas = new DataSet1TableAdapters.tb_paginasTableAdapter();
+        DataTable tb00 = paginas.Get_select_id(id);
+        string titulo = (string)tb00.Rows[0]["titulo"];
+        lbl_titulo.Text = titulo;
+    }
+    private void geraPDF(string html)
+    {
+        //(1)using PDFWriter
+        Document doc = new Document();
+        MemoryStream memoryStream = new MemoryStream();
+        PdfWriter writer = PdfWriter.GetInstance(doc, memoryStream);
+        doc.Open();
+        iTextSharp.text.html.simpleparser.StyleSheet styles = new iTextSharp.text.html.simpleparser.StyleSheet();
+        iTextSharp.text.html.simpleparser.HTMLWorker hw = new iTextSharp.text.html.simpleparser.HTMLWorker(doc);
+        hw.Parse(new StringReader(html));
+        writer.CloseStream = false;
+
+        doc.Close();
+        //Get the pointer to the beginning of the stream. 
+        memoryStream.Position = 0;
+        //You may use this PDF in memorystream to send as an attachment in an email
+        //OR download as a PDF
+        //SendEmail(memoryStream);
+        DownloadAsPDF(memoryStream);
+
+    }
+
+    private void PreencheProcedimento()
+    {
+        int i = 0;
+        TextBox oTB;
+        foreach (RepeaterItem oItem in rptProcedimentos.Items)
+        {
+            oTB = (TextBox)oItem.FindControl("txt_codProcedimentoMasTuss");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                procedimentos.Rows[i]["cod"] = oTB.Text;
+            }
+            oTB = (TextBox)oItem.FindControl("txt_DescricaoCirugiaExame");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                procedimentos.Rows[i]["descricao"] = oTB.Text;
+            }
+            i++;
+        }
+    }
+
+    private void PreencheEquipamento()
+    {
+        int i = 0;
+        TextBox oTB;
+        foreach (RepeaterItem oItem in rptEquipamento.Items)
+        {
+            oTB = (TextBox)oItem.FindControl("txt_equipamentosCaixas");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                equipamentos.Rows[i]["cod"] = oTB.Text;
+            }
+            oTB = (TextBox)oItem.FindControl("txt_quantidade");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                equipamentos.Rows[i]["descricao"] = oTB.Text;
+            }
+            i++;
+        }
+    }
+
+    private void PreencheMaterial()
+    {
+        int i = 0;
+        TextBox oTB;
+        foreach (RepeaterItem oItem in rptMateriais.Items)
+        {
+            oTB = (TextBox)oItem.FindControl("txt_MateriaisEspeciais");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                materiais.Rows[i]["cod"] = oTB.Text;
+            }
+            oTB = (TextBox)oItem.FindControl("txt_Fornecedor");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                materiais.Rows[i]["fornecedor"] = oTB.Text;
+            }
+            oTB = (TextBox)oItem.FindControl("txt_materiaisQtde");
+            if (!string.IsNullOrEmpty(oTB.Text))
+            {
+                materiais.Rows[i]["quantidade"] = oTB.Text;
+            }
+            i++;
+        }
+    }
+
+    protected void btnInserirEquipamento_Click(object sender, EventArgs e)
+    {
+        PreencheEquipamento();
+        PreencheProcedimento();
+        PreencheMaterial();
+        DataRow oRow;
+        oRow = equipamentos.NewRow();
+        oRow["id"] = ((Int32)equipamentos.Rows[equipamentos.Rows.Count - 1]["id"]) + 1;
+        equipamentos.Rows.Add(oRow);
+        rptEquipamento.DataSource = equipamentos;
+        rptEquipamento.DataBind();
+        Session["equipamentos"] = equipamentos;
+    }
+
+
+    protected void btnInserirProcedimento_Click(object sender, EventArgs e)
+    {
+        PreencheEquipamento();
+        PreencheProcedimento();
+        PreencheMaterial();
+        DataRow oRow;
+        oRow = procedimentos.NewRow();
+        oRow["id"] = ((Int32)procedimentos.Rows[procedimentos.Rows.Count - 1]["id"]) + 1;
+        procedimentos.Rows.Add(oRow);
+        rptProcedimentos.DataSource = procedimentos;
+        rptProcedimentos.DataBind();
+        Session["procedimentos"] = procedimentos;
+    }
+
+    protected void btnInserirMaterial_Click(object sender, EventArgs e)
+    {
+        PreencheEquipamento();
+        PreencheProcedimento();
+        PreencheMaterial();
+        DataRow oRow;
+        oRow = materiais.NewRow();
+        oRow["id"] = ((Int32)materiais.Rows[materiais.Rows.Count - 1]["id"]) + 1;
+        materiais.Rows.Add(oRow);
+        rptMateriais.DataSource = materiais;
+        rptMateriais.DataBind();
+        Session["materiais"] = materiais;
+    }
+
+    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    {
+        PreencheEquipamento();
+        PreencheProcedimento();
+        PreencheMaterial();
+
+        /*string email = "acirurgico@hospitalbrasil.com.br";
+        string email_to = "acirurgico@hospitalbrasil.com.br";
+        //string email_to = "rhselecao@hospitalassuncao.com.br";
+        string email_from = "acirurgico@hospitalbrasil.com.br";*/
+
+        string email = "acirurgico@hospitalbrasil.com.br";
+        string email_to = "acirurgico@hospitalbrasil.com.br";
+        //string email_to = "rhselecao@hospitalassuncao.com.br";
+        string email_from = "acirurgico@hospitalbrasil.com.br";
+
+        string ip = "";
+        IPAddress[] addressList = Dns.GetHostByName(Dns.GetHostName()).AddressList;
+        for (int i = 0; i < addressList.Length; i++) ip += addressList[i].ToString() + "\n";
+
+        string bodyhtml = "<table width=100% border=1 bordercolor=#000099 cellspacing=0 cellpadding=5><tr><td width=30%><img src='http://www.hospitalbrasil.com.br/images/logo.jpg' width=80% /></td><td valign=baseline align='center'><H2><strong><font color=#000099>Brasil: Aviso de Cirurgia</font></strong></H2></td></tr></table>";
+        bodyhtml += "<strong>Tipo de cirurgia: </strong>" + rdo_tipoCirurgia.SelectedValue + "<br />";
+        bodyhtml += "<strong>Nome completo do paciente: </strong>" + txt_nome_paciente.Text + "<br />";
+        bodyhtml += "<strong>Telefone:</strong> " + txt_telefone.Text + "<br />";
+        bodyhtml += "<strong>Telefone celular:</strong> " + txt_telefoneCelular.Text + "<br />";
+        bodyhtml += "<strong>Data de nascimento: </strong>" + txt_nascimento.Text + "<br />";
+        bodyhtml += "<strong>Sexo: </strong>" + rdo_sexo.SelectedValue + "<br />";
+        bodyhtml += "<strong>Peso </strong>: " + txt_peso.Text + "<br />";
+        bodyhtml += "<strong>Registro: </strong>" + txt_registro.Text + "&nbsp;&nbsp;&nbsp;<strong>Leito: </strong>" + txt_leito.Text + "<br />";
+        bodyhtml += "<font size='4'><strong>Informações do Convênio</strong></font><br />";
+        bodyhtml += "<strong>Convênio:</strong> " + txt_convenio.Text + "<br />";
+        bodyhtml += "<strong>Plano:</strong> " + txt_plano.Text + "<br />";
+        bodyhtml += "<strong>Tipo do plano: </strong>" + rdo_tipoplano.SelectedValue + "<br />";
+        bodyhtml += "<strong>Acomodação: </strong>" + rdo_acomodacao.SelectedValue + "<br />";
+        bodyhtml += "<strong>Produto: </strong>" + txt_produto.Text + "<br />";
+        bodyhtml += "<strong>Código da Carteirinha: </strong>" + txt_codigoCarteirinha.Text + "<br />";
+        bodyhtml += "<font size='4'><strong>Informações da equipe médica</strong></font> <br />";
+        bodyhtml += "<strong>Nome do médico: </strong>" + txt_nome_medico.Text + "&nbsp;&nbsp;&nbsp; <strong>CRM:</strong> " + txt_crm.Text + "<br />";
+        bodyhtml += "<strong>Telefone do médico:</strong> " + txt_telefone_medico.Text + "<br />";
+        bodyhtml += "<strong>E-mail: </strong>" + txt_email.Text + "<br />";
+        bodyhtml += "<strong>Origem do Anestesista: </strong>" + rdo_origem_anestesista.SelectedValue + "<br />";
+        bodyhtml += "<strong>Tipo de Anestesia: </strong>" + txt_tipo_anestesia.Text + "<br />";
+        bodyhtml += "<strong>Nome do Anestesista: </strong>" + txt_nome_anestesista.Text + "<br />";
+        bodyhtml += "<font size='4'><strong>Informações para agendamento</strong></font>";
+        bodyhtml += "<strong>Data de Internação: </strong>" + txt_data_internacao.Text + "&nbsp;&nbsp;&nbsp; <strong>Hora:</strong> " + txt_hora_internacao.Text + "<br />";
+        bodyhtml += "<strong>Data da Cirurgia / Exame: </strong>" + txt_data_cirurgia.Text + "&nbsp;&nbsp;&nbsp; <strong>Hora:</strong> " + txt_hora_cirurgia.Text + "<br />";
+        bodyhtml += "<strong>Tempo Previsto:</strong> " + txt_tempo_cirurgia.Text + "<br />";
+        bodyhtml += "<strong>CID:</strong> " + txt_CID.Text + "&nbsp;&nbsp;&nbsp; <strong>Diagnóstico:</strong> " + txt_diagnostico.Text + "<br />";
+        bodyhtml += "<strong>Lateralidade:</strong> " + rdo_Lateralidade.SelectedValue + "<br />";
+        bodyhtml += "<strong> Paciente alérgico a latex:</strong> " + rdo_Alergico_latex.SelectedValue + "<br />";
+        bodyhtml += "<br />";
+        bodyhtml += "<strong>Cod. Procedimento MAS/TUSS</strong> | <strong>Descrição da Cirurgia / do Exame</strong><br />";
+        foreach (DataRow oRow in procedimentos.Rows)
+        {
+            if (!string.IsNullOrEmpty(oRow["cod"].ToString()))
+            {
+                bodyhtml += oRow["id"].ToString() + "° " + oRow["cod"].ToString() + "&nbsp;&nbsp;&nbsp;-<strong>Descrição:</strong> " + oRow["descricao"].ToString() + "<br />";
+            }
+        }
+        
+
+
+        if (txt_JustificativaProcedimento.Text != "") { }
+        else
+        {
+            bodyhtml += "Justificativa para o procedimento: " + txt_JustificativaProcedimento.Text + "<br />";
+        }
+
+
+        bodyhtml += "<br />";
+        bodyhtml += "<strong>Equipamentos ou caixas</strong> | <strong>Quantidade</strong><br />";
+        foreach (DataRow oRow in equipamentos.Rows)
+        {
+            if (!string.IsNullOrEmpty(oRow["cod"].ToString()))
+            {
+                bodyhtml += oRow["id"].ToString() + "° " + oRow["cod"].ToString() + "&nbsp;&nbsp;&nbsp;-<strong>Descrição:</strong> " + oRow["descricao"].ToString() + "<br />";
+            }
+        }
+
+        
+        bodyhtml += "<br />";
+        if (materiais.Rows.Count > 0)
+        {
+            bodyhtml += "<table cellspacing=5>";
+            bodyhtml += "<tr>";
+            bodyhtml += "<td width=300><strong>Materiais especiais / OPME</strong></td>";
+            bodyhtml += "<td width=300><strong>Fornecedor</strong></<td>";
+            bodyhtml += "<td width=200><strong>Quantidade</strong></<td>";
+            bodyhtml += "</tr>";
+            foreach (DataRow oRow in materiais.Rows)
+            {
+                if (!string.IsNullOrEmpty(oRow["cod"].ToString()))
+                {
+                    bodyhtml += "<tr>";
+                    bodyhtml += "<td width=300>" + oRow["id"].ToString() + "° " + oRow["cod"].ToString() + "</td>";
+                    bodyhtml += "<td width=300>" + oRow["fornecedor"].ToString() + "</<td>";
+                    bodyhtml += "<td width=200>" + oRow["quantidade"].ToString() + "</<td>";
+                    bodyhtml += "</tr>";
+                }
+            }
+
+            
+            if (txt_JustificativaOPME.Text != "")
+            {
+                bodyhtml += "<tr>";
+                bodyhtml += "<td colspan=3><strong>Justificativa para uso de OPME </strong>(se necessário):" + txt_JustificativaOPME.Text + "</td>";
+                bodyhtml += "</tr>";
+            }
+            bodyhtml += "</table>";
+        }//fim do if txt_MateriaisEspeciais1.Text !=""
+
+        bodyhtml += "<br />";
+        bodyhtml += "<h2><strong>Reservas</strong></h2>";
+        bodyhtml += rdo_reserva.SelectedValue + "<br />";
+        if (txt_biopsiaCongelacao.Text != "")
+        {
+            bodyhtml += "<strong>Biópsia de Congelação – Laboratório:</strong> " + txt_biopsiaCongelacao.Text;
+        }
+        bodyhtml += "<br />";
+        if (txt_medicamento.Text != "")
+        {
+            bodyhtml += "<strong>Medicamento - Especificar: </strong>" + txt_medicamento.Text;
+        }
+        bodyhtml += "<br />";
+        if (txt_tipo_sangue.Text != "")
+        {
+            bodyhtml += "<strong>Reserva de Sangue tipo: </strong>" + txt_tipo_sangue.Text;
+        }
+        bodyhtml += "<br />";
+        if (txt_outros.Text != "")
+        {
+            bodyhtml += "<strong>Outros:</strong> " + txt_outros.Text;
+        }
+        bodyhtml += "<br /><br /><br /><table width=100% border=1 bordercolor=#000099 cellspacing=0 cellpadding=5><tr><td width=20%><img src='http://www.hospitalbrasil.com.br/images/logo.jpg' width=80% /></td><td valign='middle' align='right'><font color=#000099> © Hospital e Maternidade Brasil</font></td></tr></table>";
+
+
+
+        SmtpClient cliente = new SmtpClient("smtp.connexion.com.br");
+        //cliente.EnableSsl = ture;
+
+        MailAddress remetente = new MailAddress(email_to);
+        MailAddress destinatario = new MailAddress(email_to);
+        MailMessage mensagem = new MailMessage(remetente, destinatario);
+        mensagem.Body = bodyhtml;
+        mensagem.Subject = "Brasil: Aviso de Cirurgia - Site Unidade Brasil - " + rdo_tipoCirurgia.SelectedValue;
+        mensagem.IsBodyHtml = true;
+        mensagem.SubjectEncoding = System.Text.Encoding.GetEncoding("ISO-8859-1");
+        mensagem.BodyEncoding = System.Text.Encoding.GetEncoding("ISO-8859-1");
+
+        NetworkCredential credenciais = new NetworkCredential("siterapido@connexion.com.br", "conn001", "");
+        cliente.Credentials = credenciais;
+
+        try
+        {
+            cliente.Send(mensagem);
+            Session["html"] = bodyhtml;
+            Response.Redirect("confirmacao.aspx");
+
+        }
+        catch
+        {
+
+            Response.Write(@"<script>alert('Ocorreu um erro ao enviar a mensagem. \n Tente novamente mais tarde.');location.href='default.aspx';</script>");
+        }
+
+    }
+}

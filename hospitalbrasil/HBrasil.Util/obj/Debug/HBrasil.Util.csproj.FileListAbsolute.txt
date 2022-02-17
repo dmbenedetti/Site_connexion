@@ -1,0 +1,14 @@
+E:\Hospital_Brasil\HBrasil.Util\bin\HBrasil.Util.dll
+E:\Hospital_Brasil\HBrasil.Util\bin\HBrasil.Util.pdb
+E:\Hospital_Brasil\HBrasil.Util\obj\Debug\HBrasil.Util.dll
+E:\Hospital_Brasil\HBrasil.Util\obj\Debug\HBrasil.Util.pdb
+C:\Daniel\hospital_brasil\HBrasil.Util\bin\HBrasil.Util.dll
+C:\Daniel\hospital_brasil\HBrasil.Util\bin\HBrasil.Util.pdb
+C:\Daniel\hospital_brasil\HBrasil.Util\obj\Debug\HBrasil.Util.csprojResolveAssemblyReference.cache
+C:\Daniel\hospital_brasil\HBrasil.Util\obj\Debug\HBrasil.Util.dll
+C:\Daniel\hospital_brasil\HBrasil.Util\obj\Debug\HBrasil.Util.pdb
+C:\Daniel\hospitalbrasil2\HBrasil.Util\bin\HBrasil.Util.dll
+C:\Daniel\hospitalbrasil2\HBrasil.Util\bin\HBrasil.Util.pdb
+C:\Daniel\hospitalbrasil2\HBrasil.Util\obj\Debug\HBrasil.Util.csprojResolveAssemblyReference.cache
+C:\Daniel\hospitalbrasil2\HBrasil.Util\obj\Debug\HBrasil.Util.dll
+C:\Daniel\hospitalbrasil2\HBrasil.Util\obj\Debug\HBrasil.Util.pdb

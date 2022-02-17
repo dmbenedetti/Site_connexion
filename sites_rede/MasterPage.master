@@ -1,0 +1,418 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage_grupo" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>
+        <asp:Literal ID="ltlTitle" runat="server"></asp:Literal></title>
+
+    <asp:Literal ID="ltlIcon" runat="server"></asp:Literal>
+
+
+
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+    <!--<link href="/templates/jet_rededor/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+    <link rel='stylesheet' type='text/css' href='css/commom.css' />
+    <link rel='stylesheet' type='text/css' href='css/menu.css' />
+    <link rel='stylesheet' type='text/css' href='css/languageswitcher.css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet'
+        type='text/css' />
+    <asp:Literal ID="ltlCssHosp" runat="server"></asp:Literal>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <script type='text/javascript' src='js/menu_jquery.js'></script>
+    <asp:Literal ID="ltlGMTTop" runat="server"></asp:Literal>
+
+    <script type="text/javascript">
+        var bShow = false;
+
+        function Busca_text() {
+            if (document.getElementById("TextBox1").value == "") {
+                document.getElementById("TextBox1").value = "Digite aqui o que você procura?";
+            }
+            //
+        }
+        function Busca_text2() {
+            if (document.getElementById("TextBox1").value == "Digite aqui o que você procura?") {
+                document.getElementById("TextBox1").value = "";
+            }
+
+        }
+
+        function Buscar() {
+            if (document.getElementById("TextBox1").value == "Digite aqui o que você procura?" || document.getElementById("TextBox1").value == "") {
+                return;
+            }
+            else {
+                window.location = "busca.aspx?wrd=" + document.getElementById("TextBox1").value;
+            }
+        }
+
+        function ShowHosps() {
+            if ($(window).height() > 800) {
+                document.getElementById("dvHosps").style.display = "block";
+                bShow = true;
+            }
+            else {
+                if (bShow) {
+                    document.getElementById("dvHosps").style.display = "none";
+                    bShow = false;
+                }
+                else {
+                    document.getElementById("dvHosps").style.display = "block";
+                    bShow = true;
+                }
+            }
+        }
+
+        function SetHosp(e) {
+            e.className = "sethosp";
+        }
+        function NoSetHosp(e) {
+            e.className = "nostehosp";
+        }
+
+        var timeout = 1000;
+        var closetimer = 0;
+        var ddmenuitem = 0;
+        function jsddm_timer(timer) {
+            //if (ddmenuitem == 1) {
+            //alert(1);
+            ddmenuitem = 0;
+            closetimer = window.setTimeout(f_sem_cor, timer);
+            //}
+        }
+
+        function jsddm_canceltimer() {
+            //alert(2);
+            ddmenuitem = 2;
+            if (closetimer) {
+                window.clearTimeout(closetimer);
+                closetimer = null;
+            }
+        }
+        function f_sem_cor() {
+            if ($(window).height() > 800) {
+                //alert(3);
+                if (ddmenuitem == 2)
+                    return;
+                document.getElementById("dvHosps").style.display = "none";
+                bShow = false;
+                ddmenuitem = 0;
+            }
+        }
+
+        function ShowBusca() {
+            if (document.getElementById("search").style.display != "none") {
+                document.getElementById("search").style.display = "none";
+                document.getElementById("search").style.visibility = "hiddem";
+            }
+            else {
+                $("#cssmenu>ul").removeClass("open");
+                document.getElementById("search").style.display = "block";
+                document.getElementById("search").style.visibility = "visible";
+            }
+        }
+
+        $(document).ready(function () {
+            $('h2.accordion').click(function () {
+                $(this).next().slideToggle("slow");
+            });
+        });
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true" EnableScriptLocalization="true">
+        </asp:ScriptManager>
+        <div id="btnbuscarmoblie" onclick="ShowBusca()">
+            <div style="float: left; padding-top: 13px; `padding-left: 16px;">O que você procura </div>
+            <div style="padding-top: 6px; float: left; padding-left: 9px;">
+                <img src="images/transp.gif">
+            </div>
+        </div>
+        <div id="commom_header">
+            <div id="aligner">
+                <div id="hospAtual">
+                    você está no
+                <asp:Literal ID="ltlHospiatl" runat="server"></asp:Literal>
+                </div>
+                <div id="hospMudar" onmouseover="if ($(window).height() > 800) {jsddm_canceltimer();ShowHosps();}" onclick="ShowHosps()">
+                    <div id="dvHosps" onmouseout="jsddm_timer(timeout);" class="nostehosp">
+                        <asp:Repeater ID="rptHospitais" runat="server" DataSourceID="ds_hosps">
+                            <ItemTemplate>
+                                <div style="width: 150px; float: left; padding-left: 3px;" onmouseover="jsddm_canceltimer(); SetHosp(this);" onmouseout="NoSetHosp(this);" onclick="<%# MudarHosp((bool)Eval("fg_nova_pagina"), Eval("ds_dominio").ToString()) %>"><%# Eval("ds_titulo_pagina") %></div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                    Mudar hospital
+                </div>
+                <div id="linksApoio">
+                    <a href="http://www.rededor.com.br" class="whtLink">Portal Rede D'Or</a>
+                </div>
+                <%-- <div id="country-select">
+                <div>
+                    <select id="country-options" name="country-options">
+                        <option selected="selected" title="#" value="br">PT- BR</option>
+                        <option title="#" value="us">EN - US</option>
+                        <option title="#" value="fr">FR - FR</option>
+                    </select>
+                    <input value="Select" type="submit" />
+                </div>
+            </div>--%>
+            </div>
+        </div>
+        <div id="site">
+            <div id="header">
+                <div id="logo" style="cursor: pointer;" onclick="location.href='default.aspx'" <%= logo%>>
+                    <asp:Image ImageUrl="images/transp.gif" runat="server" ID="imgLogo" />
+                </div>
+                <div id="search">
+                    <asp:Panel DefaultButton="btnBuscar" ID="pnlBuscar" runat="server">
+                        <input type="text" id="TextBox1" runat="server" value="Digite aqui o que você procura?" onfocus="Busca_text2('')" onblur="Busca_text('')" class="inputSearch" />
+                        <div class="btnSearch">
+                            <img style="cursor: pointer;" src="images/search.png" width="32" height="32" onclick="Buscar()" />
+                        </div>
+                        <asp:ImageButton ID="btnBuscar" runat="server" ImageUrl="~/images/transp.gif" Width="1" Height="1" OnClick="btnBuscar_Click" />
+                    </asp:Panel>
+                </div>
+                <div id="social">
+                    <asp:HyperLink ID="hpkFaceBook" Target="_blank" runat="server"><img src="images/rsl.gif" class="facebook" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkTwitter" Target="_blank" runat="server"><img src="images/rsl.gif" class="twitter" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkYouTube" Target="_blank" runat="server"><img src="images/ico_youtube.jpg" class="youtube" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkBlog" Target="_blank" runat="server"><img src="images/ico.blog.png" class="blog" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkLinkedin" Target="_blank" runat="server"><img src="images/linkedin.png" class="linkedin" /></asp:HyperLink>
+                </div>
+                <div id="telefone">
+                    <div style="padding-right: 10px;">
+                        <img src="images/rsl.gif" class="atendimento" />
+                    </div>
+                    <span class="headerPhone">
+                        <asp:Literal ID="ltlTelefone" runat="server"></asp:Literal></span>
+                </div>
+            </div>
+            <div id='cssmenu'>
+                <ul>
+                    <!--li class='active'><a href='index.html'><span>o hospital</span></a></li-->
+                    <li class='has-sub'><a href='#'><span>O hospital</span></a>
+                        <ul>
+                            <asp:Repeater ID="rptMenuHospital" runat="server" DataSourceID="ds_hospital">
+                                <ItemTemplate>
+                                    <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                        <%# Eval("nm_nome") %></span></a></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href="#"><span>Serviços</span></a>
+                        <ul>
+                            <asp:Repeater ID="rptMenuServico" runat="server" DataSourceID="ds_servico">
+                                <ItemTemplate>
+                                    <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                        <%# Eval("nm_nome") %></span></a></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </li>
+                    <li><a href="exames_especialidades.aspx"><span>Exames e Especialidades</span></a></li>
+                    <li class='has-sub'><a href="imprensa.aspx"><span>Imprensa</span></a>
+                        <ul>
+                            <asp:Repeater ID="rptMenuImprensa" runat="server" DataSourceID="ds_imprensa">
+                                <ItemTemplate>
+                                    <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                        <%# Eval("nm_nome") %></span></a></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </li>
+                    <li class='has-sub'><a href="area_medica.aspx"><span>Profissionais da Saúde</span></a>
+                        <ul>
+                            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="ds_am">
+                                <ItemTemplate>
+                                    <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                        <%# Eval("nm_nome") %></span></a></li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </ul>
+                    </li>
+                    <li class='last'><a href="faleconosco.aspx"><span>Ouvidoria</span></a></li>
+                </ul>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            
+        <div id="footer_menu">
+            <div id="footer_menu_mobile">
+                <div style="padding:0px 20px;">
+                <h2 class="accordion">O hospital<span style="float: right;">+</span></h2>
+                <div class="accordion">
+                    <ul>
+                        <asp:Repeater ID="Repeater2" runat="server" DataSourceID="ds_hospital">
+                            <ItemTemplate>
+                                <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                    <%# Eval("nm_nome") %></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <h2 class="accordion">Serviços<span style="float: right;">+</span></h2>
+                <div class="accordion">
+                    <ul>
+                        <asp:Repeater ID="Repeater3" runat="server" DataSourceID="ds_servico">
+                            <ItemTemplate>
+                                <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                    <%# Eval("nm_nome") %></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+              <h2 class="accordion"><a href="exames_especialidades.aspx"" style="padding:initial;">Exames e Especialidades</a></h2>
+                <h2 class="accordion">Imprensa<span style="float: right;">+</span></h2>
+                <div class="accordion">
+                    <ul>
+                        <asp:Repeater ID="Repeater4" runat="server" DataSourceID="ds_imprensa">
+                            <ItemTemplate>
+                                <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                    <%# Eval("nm_nome") %></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <h2 class="accordion">Profissionais da Saúde<span style="float: right; ">+</span></h2>
+                <div class="accordion">
+                    <ul>
+                        <asp:Repeater ID="Repeater5" runat="server" DataSourceID="ds_am">
+                            <ItemTemplate>
+                                <li class='has-sub'><a href='<%# URL(Convert.ToInt32(Eval("id_tipo")), Eval("ds_link").ToString(), Convert.ToInt32(Eval("id_pagina")), Eval("nm_nome").ToString()) %>'><span>
+                                    <%# Eval("nm_nome") %></span></a></li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <h2 class="accordion"><a href="faleconosco.aspx"" style="padding:initial;">Ouvidoria</a></h2>
+                    </div>
+            </div>
+
+            <div id="footer_mobile">
+                <div style="float:left; padding-left: 10px; margin-top: 6px;">
+                    <asp:HyperLink ID="hpkFaceBook2" style="padding:initial;" Target="_blank" runat="server"><img src="images/rsl.gif" class="facebook" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkTwitter2" style="padding:initial;" Target="_blank" runat="server"><img src="images/rsl.gif" class="twitter" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkYouTube2" style="padding:initial;" Target="_blank" runat="server"><img src="images/ico_youtube.jpg" class="youtube" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkBlog2" style="padding:initial;" Target="_blank" runat="server"><img src="images/ico.blog.png" class="blog" /></asp:HyperLink>
+                    <asp:HyperLink ID="hpkLinkedin2" style="padding:initial;" Target="_blank" runat="server"><img src="images/linkedin.png" class="linkedin" /></asp:HyperLink>
+                </div>
+                <div style="float:left; clear:both;    text-align: left; width: -moz-calc(100% - 100px);  width: -webkit-calc(100% - 100px); width: -o-calc(100% - 100px); width: calc(100% - 100px); padding-left: 10px; margin-top: 10px; font-size: 13px;color: #666;"><asp:Literal ID="Literal1" runat="server"></asp:Literal></div>
+                <div style="float:right; margin-top: -40px;"><a href="http://www.rededor.com.br" target="_blank">
+                    <img src="images/logoRedeDorSaoLuiz.png" style="margin: 20px 0;" /></div>
+            </div>
+
+            <div id="footer_menu_interno">
+                <div class="footeritem"><a href="default.aspx">Home</a> |</div>
+                <div class="footeritem"><a href="servicos.aspx">Serviços</a> | </div>
+                <div class="footeritem"><a href="exames_especialidades.aspx">Exames e Especialidades</a> | </div>
+                <div class="footeritem"><a href="noticias.aspx">Imprensa</a> | </div>
+                <div class="footeritem">
+                    <a href="area_medica.aspx">Profissionais da Saúde | </a>
+                </div>
+                <div class="footeritem"><a href="faleconosco.aspx">Ouvidoria</a></div>
+            </div>
+            <div style="left: -112px;position: relative;float: right;top: -12px;" id="divBNDES" runat="server" visible="false"><div style="position: absolute;"><a href="https://www.bndes.gov.br/wps/portal/site/home" target="_blank"><img src="images/bndes.gif" style="width: 71px;height: 71px; border: 0px;"></a></div></div>
+        </div>
+        <div id="bannerfooter" style="clear: both;float: left;width: 100%;" runat="server" visible="false">
+            <div id="primeiroBanner" style="float: left;width: 100%;max-width: 470px;">
+                <a href="http://www.finep.gov.br" target="_blank" style="border: 0px;"><img src="images/banner_footer/banner_footer1.jpg" style="width: 100%;"></a>
+            </div>
+            <div id="segundoBanner" style="float: left;width: 100%;max-width: 470px;">
+             <!--  <!-- <a href="http://www.finep.gov.br" target="_blank" style="border: 0px;">--><img src="images/banner_footer/banner_footer2.jpg"" style="width: 100%;"></a>
+            </div>
+        </div>
+        <div style="clear: both;" id="footer_interno">
+            <p align="center" class="smallFonts">
+                <asp:Literal ID="ltlFooter" runat="server"></asp:Literal><br />
+                ©2014 Rede D'Or São Luiz - Todos os direitos reservados
+            </p>
+            <p align="center">
+                <a href="http://www.rededor.com.br" target="_blank">
+                    <img src="images/logoRedeDorSaoLuiz.png" style="margin: 20px 0;" />
+            </p>
+        </div>
+        </div>
+    <asp:SqlDataSource ID="ds_imprensa_fixa" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+        SelectCommand="SELECT ds_link, ds_desc_menu FROM [TB_CONTEUDO_PAGINA_FIXA] a WHERE ([id_sessao] = @id_sessao AND ds_visivel = 1 AND a.id_hospital = @idHosp) ORDER BY ds_desc_menu">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="5" Name="id_sessao" Type="Int32" />
+            <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+        <asp:SqlDataSource ID="ds_hospital_fixa" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT ds_link, ds_desc_menu FROM [TB_CONTEUDO_PAGINA_FIXA] a WHERE ([id_sessao] = @id_sessao AND ds_visivel = 1 AND a.id_hospital = @idHosp) ORDER BY ds_desc_menu">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="8" Name="id_sessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+
+        <asp:SqlDataSource ID="ds_am_fixa" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT ds_link, ds_desc_menu FROM [TB_CONTEUDO_PAGINA_FIXA] a WHERE ([id_sessao] = @id_sessao AND ds_visivel = 1 AND a.id_hospital = @idHosp) ORDER BY ds_desc_menu">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="7
+            
+            "
+                    Name="id_sessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+
+        <asp:SqlDataSource ID="ds_imprensa" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT b.id_sessao, b.id_conteudo id_pagina, b.nm_titulo nm_nome, ISNULL(a.nu_ordem, 99) nu_ordem, 1 id_tipo, '' ds_link from TB_PORTAL_MENU_ORDEM a RIGHT OUTER JOIN TB_PORTAL_CONTEUDO b ON a.id_pagina = b.id_conteudo  and (a.id_tipo IS NULL OR a.id_tipo = 1) WHERE b.id_sessao = @idSessao AND ds_visivel = 1 AND b.id_status = 1 AND b.id_hospital = @idHosp and b.id_tipo IN (1,2,3,10) UNION SELECT c.id_sessao, c.id_pagina_fixa id_pagina, c.ds_titulo nm_nome, ISNULL(a.nu_ordem, 1) nu_ordem, 3 id_tipo, c.ds_link from 	TB_PORTAL_MENU_ORDEM a 	RIGHT OUTER JOIN TB_CONTEUDO_PAGINA_FIXA c ON a.id_pagina = c.id_pagina_fixa and (a.id_tipo IS NULL OR a.id_tipo = 3)WHERE c.id_sessao = @idSessao and c.id_hospital = @idHosp  order by nu_ordem">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="5" Name="idsessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="ds_hospital" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT b.id_sessao, b.id_conteudo id_pagina, b.nm_titulo nm_nome, ISNULL(a.nu_ordem, 99) nu_ordem, 1 id_tipo, '' ds_link from TB_PORTAL_MENU_ORDEM a RIGHT OUTER JOIN TB_PORTAL_CONTEUDO b ON a.id_pagina = b.id_conteudo  and (a.id_tipo IS NULL OR a.id_tipo = 1) WHERE b.id_sessao = @idSessao AND ds_visivel = 1 AND b.id_status = 1 AND b.id_hospital = @idHosp and b.id_tipo IN (1,2,3,10) UNION SELECT c.id_sessao, c.id_pagina_fixa id_pagina, c.ds_titulo nm_nome, ISNULL(a.nu_ordem, 1) nu_ordem, 3 id_tipo, c.ds_link from 	TB_PORTAL_MENU_ORDEM a 	RIGHT OUTER JOIN TB_CONTEUDO_PAGINA_FIXA c ON a.id_pagina = c.id_pagina_fixa and (a.id_tipo IS NULL OR a.id_tipo = 3)WHERE c.id_sessao = @idSessao and c.id_hospital = @idHosp  order by nu_ordem">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="8" Name="idsessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="ds_servico" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT b.id_sessao, b.id_conteudo id_pagina, b.nm_titulo nm_nome, ISNULL(a.nu_ordem, 99) nu_ordem, 1 id_tipo, '' ds_link from TB_PORTAL_MENU_ORDEM a RIGHT OUTER JOIN TB_PORTAL_CONTEUDO b ON a.id_pagina = b.id_conteudo  and (a.id_tipo IS NULL OR a.id_tipo = 1) WHERE b.id_sessao = @idSessao AND ds_visivel = 1 AND b.id_status = 1 AND b.id_hospital = @idHosp and b.id_tipo IN (1,2,3,10) UNION SELECT c.id_sessao, c.id_pagina_fixa id_pagina, c.ds_titulo nm_nome, ISNULL(a.nu_ordem, 1) nu_ordem, 3 id_tipo, c.ds_link from 	TB_PORTAL_MENU_ORDEM a 	RIGHT OUTER JOIN TB_CONTEUDO_PAGINA_FIXA c ON a.id_pagina = c.id_pagina_fixa and (a.id_tipo IS NULL OR a.id_tipo = 3)WHERE c.id_sessao = @idSessao and c.id_hospital = @idHosp  order by nu_ordem">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="9" Name="idsessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="ds_am" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT b.id_sessao, b.id_conteudo id_pagina, b.nm_titulo nm_nome, ISNULL(a.nu_ordem, 99) nu_ordem, 1 id_tipo, '' ds_link from TB_PORTAL_MENU_ORDEM a RIGHT OUTER JOIN TB_PORTAL_CONTEUDO b ON a.id_pagina = b.id_conteudo  and (a.id_tipo IS NULL OR a.id_tipo = 1) WHERE b.id_sessao = @idSessao AND ds_visivel = 1 AND b.id_status = 1 AND b.id_hospital = @idHosp and b.id_tipo IN (1,2,3,10) UNION SELECT c.id_sessao, c.id_pagina_fixa id_pagina, c.ds_titulo nm_nome, ISNULL(a.nu_ordem, 1) nu_ordem, 3 id_tipo, c.ds_link from 	TB_PORTAL_MENU_ORDEM a 	RIGHT OUTER JOIN TB_CONTEUDO_PAGINA_FIXA c ON a.id_pagina = c.id_pagina_fixa and (a.id_tipo IS NULL OR a.id_tipo = 3)WHERE c.id_sessao = @idSessao and c.id_hospital = @idHosp  order by nu_ordem">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="7" Name="idsessao" Type="Int32" />
+                <asp:SessionParameter Name="idHosp" SessionField="idHosp" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+        <asp:SqlDataSource ID="ds_hosps" runat="server" ConnectionString="<%$ ConnectionStrings:db_rede_dorConnectionString %>"
+            SelectCommand="SELECT *, case when aa >= bb then aa - bb else aa end as [ordem] FROM (SELECT id_hospital_portal, id_hospital, ds_dominio, ds_imagem_logo, ds_titulo_pagina, ds_telefone, ds_endereco_rodape, ds_link_facebook, ds_link_twitter, ds_google_analytics, ISNULL(fg_nova_pagina, 0) fg_nova_pagina, ROW_NUMBER() OVER(ORDER BY ds_titulo_pagina ASC) aa, ((select count(*) from TB_HOSPITAL_PORTAL WHERE fg_exibir = 1)/2) bb FROM TB_HOSPITAL_PORTAL WHERE fg_exibir = 1) h ORDER BY ordem, ds_titulo_pagina"></asp:SqlDataSource>
+    </form>
+    <%--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    --%>
+    <script src="js/languageswitcher.js"></script>
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', '<%= GA_Cod %>', '<%= GA_dom %>');
+        ga('send', 'pageview');
+
+    </script>
+    <asp:Literal ID="ltlGMT" runat="server"></asp:Literal>
+</body>
+</html>

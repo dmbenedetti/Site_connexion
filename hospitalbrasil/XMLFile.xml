@@ -1,0 +1,86 @@
+﻿<ResultadoExames NrCliente="447048" NrInternacao="19092198" NrRequisicao="0" Unidade="870" NrFicha="1420893" NomeCliente="JUNIOR DA SILVA" idInternoLaboratorio="">
+  <Exames>
+    <Exame SiglaExame="TTPAURG" IdExame="2270" Item="1" ItemFleury="100" IdAmostra="0" DataColeta="14/05/2012" Versao="0" TipoResultado=" ">
+      <ProfissionaisSaude />
+      <Laudo><![CDATA[  TEMPO DE TROMBOPLASTINA PARCIAL ATIVADO, plasma  Método: Coagulométrico                                                      VALOR DE REFERÊNCIA    RESULTADO              : 26,8 segundos            maior que 6 meses:  NORMAL DO DIA          : 34,0 segundos            relação paciente/normal  RELAÇÃO PACIENTE/NORMAL: 0,79                     0,86 a 1,19    Resp.: DR EDGAR GIL RIZZATTI - CRM 94199SP]]></Laudo>
+      <Analitos>
+        <Analito CodAnalito="173" Descricao="TTPA" UnidadeMedida="" Resultado="26,8">
+          <ValorReferencia><![CDATA[]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="174" Descricao="TTPA-Paciente/Normal" UnidadeMedida="" Resultado="0,79">
+          <ValorReferencia><![CDATA[0,86 a 1,19]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="218" Descricao="TTPA-Normal do dia" UnidadeMedida="" Resultado="34,0">
+          <ValorReferencia><![CDATA[]]></ValorReferencia>
+        </Analito>
+      </Analitos>
+      <Evolutivo>
+        <Analitos />
+        <EvolutivoHTML><![CDATA[]]></EvolutivoHTML>
+      </Evolutivo>
+    </Exame>
+  </Exames>
+</ResultadoExames>
+
+
+
+
+
+<ResultadoExames NrCliente="0" NrInternacao="0" NrRequisicao="824892" Unidade="142" NrFicha="191492" NomeCliente="LILIAN ALMEIDA " idInternoLaboratorio="">
+  <Exames>
+    <Exame SiglaExame="URIN2J" IdExame="2282" Item="0" ItemFleury="400" IdAmostra="0" DataColeta="14/05/2012" Versao="0" TipoResultado=" ">
+      <ProfissionaisSaude>
+        <ProfissionalSaude TipoConselho="CRM" Estado="SP" NumeroRegistro="105182" Nome="ANDRE KONDO " />
+      </ProfissionaisSaude>
+      <Laudo><![CDATA[  URINA TIPO I - JATO MEDIO  Metodologia:  Leitura  automatizada  de  tiras  reagentes  e  análise  do  sedimento  por  imagens  digitalizadas  e/ou microscopia com contraste de  fase.    RESULTADO                                   VALORES DE REFERÊNCIA    EXAME FÍSICO-QUÍMICO    COR               : amarela                   ASPECTO           : ligeiramente turvo      límpido  pH                : 7,0                     de 5,0 a 8,0  DENSIDADE         : 1,015                   de 1,010 a 1,030                                                         PROTEÍNAS         : inferior a 0,10 g/L     inferior a 0,10 g/L (negativa)  GLICOSE           : inferior a 0,3 g/L      inferior a 0,3 g/L (negativa)  CORPOS CETÔNICOS  : negativa                negativa  BILIRRUBINA       : negativa                negativa  UROBILINOGÊNIO    : inferior a 1,0 mg/dL    inferior a 1,0 mg/dL  NITRITO           : negativa                negativa    PESQUISA DE ELEMENTOS FIGURADOS    CÉLULAS EPITELIAIS: raras   LEUCÓCITOS        :  8.000/mL               inferior a 30.000/mL  ERITRÓCITOS       : 12.000/mL               inferior a 12.000/mL  CILINDROS         : ausentes     OBS.: A  pesquisa  de  dismorfismo eritrocitário é realizada sempre que a        contagem  de hemácias for superior a 15.000/mL; abaixo deste valor,        esta investigação não tem significado clínico.    OBS.: Atenção para novos valores de referência a partir de 19/06/2011.    Resp.: DR NAIRO MASSAKAZU SUMITA - CRM 61649SP]]></Laudo>
+      <Analitos>
+        <Analito CodAnalito="184" Descricao="pH, urina" UnidadeMedida="" Resultado="7,0">
+          <ValorReferencia><![CDATA[5,0 a 8,0]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="185" Descricao="Densidade, urina" UnidadeMedida="" Resultado="1015">
+          <ValorReferencia><![CDATA[1,010 a 1,030]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="186" Descricao="Proteínas, urina isolada" UnidadeMedida="g/L" Resultado="inferior a 0,10 g/L">
+          <ValorReferencia><![CDATA[inferior a 0,10]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="187" Descricao="Glicose, urina isolada" UnidadeMedida="g/L" Resultado="inferior a 0,3 g/L">
+          <ValorReferencia><![CDATA[inferior a 0,3]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="188" Descricao="Corpos cetônicos, urina" UnidadeMedida="" Resultado="negativa">
+          <ValorReferencia><![CDATA[Negativa]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="275" Descricao="Bilirrubina, urina" UnidadeMedida="" Resultado="negativa">
+          <ValorReferencia><![CDATA[Negativa]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="276" Descricao="Urobilinogênio, urina" UnidadeMedida="mg/dL" Resultado="inferior a 1,0 mg/dL">
+          <ValorReferencia><![CDATA[inferior a 1,0]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="279" Descricao="Leucócitos, urina" UnidadeMedida="" Resultado="8000">
+          <ValorReferencia><![CDATA[inferior a 30.000/mL]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="280" Descricao="Eritrócitos, urina" UnidadeMedida="" Resultado="12000">
+          <ValorReferencia><![CDATA[inferior a 12.000/mL]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="378" Descricao="Aspecto, urina" UnidadeMedida="" Resultado="ligeiramente turvo">
+          <ValorReferencia><![CDATA[limpido]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="380" Descricao="Cor, urina" UnidadeMedida="" Resultado="amarela">
+          <ValorReferencia><![CDATA[]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="381" Descricao="Cilindros, urina" UnidadeMedida="" Resultado="ausentes ">
+          <ValorReferencia><![CDATA[]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="383" Descricao="Células Epiteliais" UnidadeMedida="" Resultado="raras">
+          <ValorReferencia><![CDATA[]]></ValorReferencia>
+        </Analito>
+        <Analito CodAnalito="628" Descricao="Nitrito, urina" UnidadeMedida="" Resultado="negativa">
+          <ValorReferencia><![CDATA[negativa]]></ValorReferencia>
+        </Analito>
+      </Analitos>
+      <Evolutivo>
+        <Analitos />
+        <EvolutivoHTML><![CDATA[]]></EvolutivoHTML>
+      </Evolutivo>
+    </Exame>
+  </Exames>
+</ResultadoExames>

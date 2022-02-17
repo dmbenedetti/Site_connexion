@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sem título</title>
+<script type="text/javascript">
+            function play() {
+                document.getElementById("monFlash").SetVariable("player:jsPlay", "");
+            }
+            function pause() {
+                document.getElementById("monFlash").SetVariable("player:jsPause", "");
+            }
+            function stop() {
+                document.getElementById("monFlash").SetVariable("player:jsStop", "");
+            }
+            function volume(n) {
+                document.getElementById("monFlash").SetVariable("player:jsVolume", n);
+            }
+        </script>
+</head>
+
+<body>
+<object type="application/x-shockwave-flash" data="player_mp3_maxi.swf" width="200" height="20">
+							<param name="wmode" value="transparent" />
+							<param name="movie" value="player_mp3_maxi.swf" />
+							<param name="FlashVars" value="mp3=635351018485226273.mp3&amp;bgcolor1=ffffff&amp;bgcolor2=cccccc&amp;buttoncolor=999999&amp;buttonovercolor=0&amp;slidercolor1=cccccc&amp;slidercolor2=999999&amp;sliderovercolor=666666&amp;textcolor=0&amp;showvolume=1" />
+							<p>Texte alternatif</p>
+						</object>
+</body>
+</html>

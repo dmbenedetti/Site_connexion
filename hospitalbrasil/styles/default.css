@@ -1,0 +1,207 @@
+/* CSS Document */
+
+*{
+border:none;
+padding:0;
+margin:0;
+}
+body{
+background: url(../images/bck_home.png) top center repeat-x #FFFFFF;}
+
+@font-face {
+	font-family: 'Frutiger LT 57 Cn';
+	src: url('Frutiger LT 57 Condensed.eof');
+	src: local('Frutiger LT 57 Cn'), url('Frutiger LT 57 Condensed.ttf') format('opentype');
+	src: local('Frutiger LT 57 Cn'), url('Frutiger LT 57 Condensed.ttf') format('truetype');
+}
+#geral{
+margin:0 auto;
+width:960px;
+}
+#topo h1{
+width:267px;
+height:91px;
+float:left;}
+#topo #search_topo{
+width:195px;
+height:24px;
+border:solid 1px #D6DEDE;
+background:#D6DEDE;
+float:right;
+margin-top:20px;
+font:12px Arial, Helvetica, sans-serif;
+color: #666666;
+}
+#topo #search_topo label{
+font-weight: bold;
+float:left;
+background:#FFFFFF;
+margin:2px 0 2px 2px;
+padding:2px 3px 8px 0;
+height:10px;
+}
+.txt_search{
+float:left;
+width:118px;
+height:20px;
+margin:2px 2px 2px 0;
+}
+.btn_search{
+float:left;
+}
+#topo{
+width:958px;
+}
+#topo #menu_topo{
+float:right;
+clear:right;
+margin-top:18px;
+}
+#topo #menu_topo ul li{
+list-style:none;
+float:left;}
+#topo #menu_topo ul li a{
+font:12px "Frutiger LT 57 Cn",Arial, Verdana;
+background:#5C9DC7;
+color:#FFFFFF;
+text-decoration:none;
+padding:10px 9px;
+border-right:solid 1px #FFFFFF;
+}
+#topo #menu_topo ul li a:hover{
+background:#fff;
+color:#5C9DC7;
+border-top:solid 1px #5C9DC7;
+}
+#destaque_home{
+margin-left:-28px;
+}
+#conteudo #chamadas_home{
+padding:11px 0;
+font:12px "Frutiger LT 57 Cn",Arial, Verdana;
+color:#FFFFFF;
+}
+#conteudo #chamadas_home a{
+color:#FFFFFF;
+text-decoration:none;
+}
+#conteudo #chamadas_home2{
+height:202px;
+}
+#conteudo #chamadas_home2 #msg_paciete{
+width:164px;
+height:186px;
+float:left;
+margin-top:20px;
+background:#436DA2;
+font:bold 9px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#FFFFFF;
+margin-right:18px;
+}
+.banner_home{
+width:164px;
+height:186px;
+float:left;
+margin-top:10px;
+}
+.banner_home2{
+width:164px;
+height:186px;
+float:right;
+margin-top:10px;
+margin-right:10px;
+
+}
+
+#conteudo #chamadas_home2 #noticias_home{
+width:530px;
+height:193px;
+background:#CDE9F1;
+float:left;
+margin:10px 0px 10px 65px;
+}
+#conteudo #chamadas_home2 #noticias_home #titulo_div_noticias p{
+font:bold 16px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#436DA2;
+width:200px;
+padding:8px 15px;
+}
+#conteudo #chamadas_home2 #noticias_home #titulo_div_noticias p span{
+float:right;}
+#conteudo #chamadas_home2 #noticias_home #titulo_div_noticias p span a{
+font:14px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+text-decoration:none;
+color:#436DA2;}
+.div_noticias{
+margin:0px 15px;
+width:230px;
+float:left;
+font:12px/15px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+}
+.div_noticias img{
+padding-bottom:8px;
+}
+.div_noticias a{
+font-weight:bold;
+text-decoration:none;
+color:#436DA2;
+}
+.div_noticias div{
+margin:0 0 10px 0;}
+#conteudo #especialidades{
+width:210px;
+float:right;
+margin:15px 0 0 0;
+font:12px/16px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#333333;
+}
+#conteudo #especialidades p{
+margin:15px 5px;}
+#conteudo #especialidades #drp_especialidades{
+border:solid 1px #333333;}
+
+#rodape{
+clear:both;
+font:12px Arial, Helvetica, sans-serif;
+color:#000000;
+}
+#rodape #copy{
+margin-top:25px;
+font-size:13px;
+width:350px;
+height:40px;
+float:left;
+
+}
+#rodape #logo_rodape{
+margin-top:15px;
+width:70px;
+height:40px;
+float:left;
+margin-right:10px;
+}
+#rodape #menu_rodape{
+font-size:11px;
+color:#666666;
+}
+#rodape #menu_rodape a{
+color:#666666;
+text-decoration:none;
+}
+#rodape #menu_rodape a:hover{
+text-decoration:underline;
+}
+#endereco{
+font:12px/16px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#474747;
+margin-top:25px;
+text-align:right;
+width:420px;
+float:right;}
+#endereco a{
+color:#436DA2;}
+#outros_hosp{
+font:bold 12px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#436DA2;
+text-align:center;
+}

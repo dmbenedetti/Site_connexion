@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style>
+@font-face {
+	font-family: 'Frutiger LT 57 Cn';
+	src: url('Frutiger LT 57 Condensed.eof');
+	src: local('Frutiger LT 57 Cn'), url('Frutiger LT 57 Condensed.ttf') format('opentype');
+	src: local('Frutiger LT 57 Cn'), url('Frutiger LT 57 Condensed.ttf') format('truetype');
+}
+
+body{
+font:12px/16px "Frutiger LT 57 Cn", Arial, Helvetica, sans-serif;
+color:#333333;
+}
+</style>
+</head>
+<body>
+<p>&nbsp;</p>
+<div style="width:300px; margin:10px auto;">
+<p>Digite o seu Id e senha para acessar o sistema </p>
+<form name="login" action="https://www.veusserver.com/veus_geral/valida_usuario.php" method="POST" target="_blank">
+              <table width="86%" height="96" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="28%"><span class="green">ID Paciente:</span></td>
+                  <td width="72%"><span class="green">
+                    <input name="nic" type="text" id="nic" size="20" class="campo" style="width:100px; margin-right:26px" />
+                  </span></td>
+                </tr>
+                <tr>
+                  <td><span class="green">Senha:</span></td>
+                  <td><input name="senha" type="password" id="senha" size="20" class="campo" style="width: 100px;" /></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><input type="image" name="imageField2" src="images/btn_ok.jpg" /></td>
+                </tr>
+              </table>
+              <p><span class="green"><input type="hidden" name="ip_origem" id="ip_origem" value="189.91.33.79">
+              <input type="hidden" name="empresa" id="empresa" value="labs_hmb"> 
+              <input type=hidden SIZE='20' NAME='pagina_retorno' value='hospitalbrasil.saoluiz.com.br/recebe_exames.aspx'>  
+              </span><br>
+              </p>
+</form>
+</div>
+
+
+<!--
+-->
+
+<!--
+
+<form action='https://www.veusserver.com/veus_geral/esqueceu_senha.php' method='POST' name='esqueceu_senha'>
+<input type=hidden SIZE='20' NAME='ip_origem' value='189.91.33.79'>
+<input type=hidden SIZE='20' NAME='empresa' value='labs_hmb'>
+<input type=hidden SIZE='20' NAME='pagina_retorno' value='hospitalbrasil.saoluiz.com.br/recebe_exames.aspx'>
+<INPUT type=text name='nic' SIZE='11'>
+<INPUT type=password name='email' SIZE='15'>
+<INPUT type=submit name='enviar' value=' login '>
+</form>
+-->
+</body>
+</html>

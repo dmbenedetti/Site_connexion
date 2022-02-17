@@ -1,0 +1,9 @@
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.Business.dll
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.Business.pdb
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.DataAccess.dll
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.Models.dll
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.DataAccess.pdb
+D:\hospital_assuncao\HBrasil.Business\bin\HBrasil.Models.pdb
+D:\hospital_assuncao\HBrasil.Business\obj\Release\HBrasil.Business.csprojResolveAssemblyReference.cache
+D:\hospital_assuncao\HBrasil.Business\obj\Release\HBrasil.Business.dll
+D:\hospital_assuncao\HBrasil.Business\obj\Release\HBrasil.Business.pdb

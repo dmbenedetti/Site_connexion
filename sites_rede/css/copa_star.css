@@ -1,0 +1,134 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+a{
+	color:#916E50;
+}
+#commom_header {
+	background-color:#916E50;
+}
+#hospAtual {
+	background:#A78B73;
+	color:#FFF;
+    font-weight: bold;
+}
+#hospMudar {
+	background:#776153;
+	color:#FFF;
+}
+h1{
+	color:#916E50;
+}
+h2{
+	color:#916E50;
+}
+#caption ul:hover {
+	background-color:#776153;
+	color: #FFF;
+}
+#caption ul {
+	background-color:#88775D;
+	color: #FFF;
+}
+.buttonDefault{
+	background-color:#FFF;
+	border: 1px solid #916E50;
+	color:#916E50;
+}
+.buttonDefault:hover{
+	background-color:#916E50;
+	border: 1px solid #916E50;
+	color:#fff;
+}
+.headerPhone{
+	color:#916E50;
+}
+img.facebook{
+	width: 23px;
+    height: 23px;
+	background:url(../images/logo/sprite_star.png) -25px -99px;
+}
+img.twitter{
+	width: 23px;
+    height: 23px;
+	background:url(../images/logo/sprite_star.png) 0 -99px;
+}
+img.atendimento{
+	width: 24px;
+    height: 23px;
+	background:url(../images/logo/sprite_star.png) -49px -99px;
+}
+img.MensagemPaciente{
+	width: 21px;
+    height: 17px;
+	background:url(../images/logo/sprite_star.png) 0 -126px;
+}
+img.CoberturaPlanos{
+	width: 15px;
+    height: 16px;
+	background:url(../images/logo/sprite_star.png) -24px -126px;
+}
+img.ViverBem{
+	width: 17px;
+    height: 17px;
+	background:url(../images/logo/sprite_star.png) -43px -126px;
+}
+img.PortalMedico{
+	width: 20px;
+    height: 17px;
+	background:url(../images/logo/sprite_star.png) -62px -126px;
+}
+#cssmenu > ul {
+    background: #916E50;
+}
+#cssmenu {
+    background: #916E50 none repeat scroll 0% 0%;
+}
+#tile {
+    color: #916E50;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.sethosp {
+    background-color: #776153;
+}
+
+.nostehosp {
+    background-color: #A78B73;
+}
+
+.exame_especialidades {
+    background-color: #A78B73; 
+    color:#FFF; 
+}
+
+.exame_especialidades_ps {
+    background-color: #A78B73; 
+}
+
+.exame_especialidades_lista {
+    background-color: #A78B73; 
+}
+
+.btnEnviar {
+    background-color: #916E50;
+}
+
+@media (max-width: 639px) {
+    #cssmenu ul {
+        background: #A78B73;
+    }
+
+    #btnbuscarmoblie img {
+        width: 31px;
+        height: 30px;
+      box-sizing: border-box;
+        background: url(../images/lupa_mobile_star.jpg) no-repeat;
+        display: block;
+      -moz-box-sizing: border-box;
+    }
+
+    #search {
+        background: #A78B73;
+    }
+}
+

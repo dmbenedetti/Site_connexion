@@ -1,0 +1,4 @@
+E:\Hospital_Brasil\HAssuncao.Models\bin\HAssuncao.Models.dll
+E:\Hospital_Brasil\HAssuncao.Models\bin\HAssuncao.Models.pdb
+E:\Hospital_Brasil\HAssuncao.Models\obj\Debug\HAssuncao.Models.dll
+E:\Hospital_Brasil\HAssuncao.Models\obj\Debug\HAssuncao.Models.pdb

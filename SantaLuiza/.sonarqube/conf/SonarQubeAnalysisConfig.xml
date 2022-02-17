@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <SonarConfigDir>C:\Daniel\SantaLuiza\.sonarqube\conf</SonarConfigDir>
+  <SonarOutputDir>C:\Daniel\SantaLuiza\.sonarqube\out</SonarOutputDir>
+  <SonarBinDir>C:\Daniel\SantaLuiza\.sonarqube\bin</SonarBinDir>
+  <SonarRunnerWorkingDirectory>C:\Daniel\SantaLuiza</SonarRunnerWorkingDirectory>
+  <SonarQubeHostUrl>http://localhost:9000/</SonarQubeHostUrl>
+  <SonarProjectKey>SantaLuzia</SonarProjectKey>
+  <SonarProjectVersion>1.0</SonarProjectVersion>
+  <SonarProjectName>Santa Luzia</SonarProjectName>
+  <AdditionalConfig>
+    <ConfigSetting Id="BuildUri" />
+    <ConfigSetting Id="TfsUri" />
+    <ConfigSetting Id="settings.file.path" Value="c:\Users\IBM_ADMIN\Downloads\sonarqube-5.3\MSBuild.SonarQube.Runner-1.1\SonarQube.Analysis.xml" />
+  </AdditionalConfig>
+  <ServerSettings>
+    <Property Name="sonar.qualitygate">1</Property>
+    <Property Name="sonar.permission.template.default">default_template</Property>
+    <Property Name="sonar.core.id">20160204142429</Property>
+    <Property Name="sonar.core.version">5.3</Property>
+    <Property Name="sonar.core.startTime">04/02/2016 14:24:29</Property>
+    <Property Name="sonar.cs.msbuild.testProjectPattern">[^\\]*test[^\\]*$</Property>
+  </ServerSettings>
+  <LocalSettings />
+</AnalysisConfig>

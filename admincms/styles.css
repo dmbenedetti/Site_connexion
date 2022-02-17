@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:o;
+	padding:0;
+	}
+	body{
+		font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+		}
+img{
+	border:none;
+	}
+#arearestrita{
+	text-align:center;
+	font:bold 36px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin:100px auto 50px auto;
+	}
+#logo_default{
+	width:150px;
+	height:94px;
+	text-align:center;
+	margin:0px auto;
+	}
+#Login-box{
+	width:300px;
+	min-height:190px;
+	margin:30px auto;
+	background:#f1f1f1;
+	font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	padding:30px 80px;
+	}
+	
+#control_login{
+	width:270px;
+	min-height:150px;
+	margin:0 auto;
+	display:block;
+	}
+.idioma {
+background:#f1f1f1;
+width:250px;
+margin: auto;
+padding:50px;	
+font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+height:200px;
+
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:7px;
+}
+#rdo_idioma{
+	margin:0 auto;
+	}
+	#btn_ok{
+		text-align:center;
+	margin:0 auto;
+	}

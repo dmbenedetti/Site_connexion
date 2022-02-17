@@ -1,0 +1,9 @@
+D:\hospital_assuncao\HAssuncao.Models\bin\HAssuncao.Models.dll
+D:\hospital_assuncao\HAssuncao.Models\bin\HAssuncao.Models.pdb
+D:\hospital_assuncao\HAssuncao.Models\obj\Release\HAssuncao.Models.dll
+D:\hospital_assuncao\HAssuncao.Models\obj\Release\HAssuncao.Models.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.Models\bin\HAssuncao.Models.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Models\bin\HAssuncao.Models.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.Models\obj\Release\HAssuncao.Models.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.Models\obj\Release\HAssuncao.Models.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Models\obj\Release\HAssuncao.Models.pdb

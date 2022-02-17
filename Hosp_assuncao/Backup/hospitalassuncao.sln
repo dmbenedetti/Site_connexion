@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "hospitalassuncao", ".\", "{6F1DAA4B-2A6C-4888-9F6F-689FD933B49A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/hospitalassuncao"
+		Debug.AspNetCompiler.PhysicalPath = ".\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\hospitalassuncao\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/hospitalassuncao"
+		Release.AspNetCompiler.PhysicalPath = ".\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\hospitalassuncao\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "3345"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F1DAA4B-2A6C-4888-9F6F-689FD933B49A}.Debug|.NET.ActiveCfg = Debug|.NET
+		{6F1DAA4B-2A6C-4888-9F6F-689FD933B49A}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

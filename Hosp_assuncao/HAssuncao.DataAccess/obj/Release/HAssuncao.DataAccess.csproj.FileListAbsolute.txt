@@ -1,0 +1,14 @@
+D:\hospital_assuncao\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.dll
+D:\hospital_assuncao\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.pdb
+D:\hospital_assuncao\HAssuncao.DataAccess\bin\HAssuncao.Models.dll
+D:\hospital_assuncao\HAssuncao.DataAccess\bin\HAssuncao.Models.pdb
+D:\hospital_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.dll
+D:\hospital_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.pdb
+D:\hospital_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\bin\HAssuncao.DataAccess.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\bin\HAssuncao.Models.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\bin\HAssuncao.Models.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.DataAccess\obj\Release\HAssuncao.DataAccess.pdb

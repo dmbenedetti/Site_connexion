@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* CSS Document */
+#bbsearch_Campos {
+	width:900px;
+	display:inline-block;
+	padding:20px 0;
+	display:inline-block;
+	border-bottom:solid #e1e1e1 1px;
+}
+#bbsearch_Campos_Div{
+	width: auto;
+	margin-right:20px;
+    height: auto;
+	float:left;
+}
+
+#bbsearch_Paginacao{
+	width: 900px;
+	margin-top:20px;
+	display:inline-block;
+	text-align:right;
+}
+#bbsearch_Item{
+	width: 900px;
+    height: auto;
+	padding:20px 0;
+	display:inline-block;
+	border-bottom:solid #e1e1e1 1px;
+}
+#bbsearch_imagem {
+	width: auto;
+    height: auto;
+	float:left;
+}
+#bbsearch_descricao {
+	width: 600px;
+    height: auto;
+	margin:0 20px;
+	float:left;
+}
+#bbsearch_EnviarMensagem{
+	width: 900px;
+    height: auto;
+	margin:20px 0;
+	float:left;
+}
+.bbsearch_TitleBoy{
+	color:#3696da;
+	font-family: 'roboto', verdana;
+	font-weight:500;
+	font-size:18px;
+}
+.bbsearch_DataBoy{
+	color:#3696da;
+	font-family: 'roboto', verdana;
+	font-weight:300;
+	font-size:18px;
+}
+.bbsearch_TitleGirl{
+	color:#cc3399;
+	font-family: 'roboto', verdana;
+	font-weight:500;
+	font-size:18px;
+}
+.bbsearch_DataGirl{
+	color:#cc3399;
+	font-family: 'roboto', verdana;
+	font-weight:300;
+	font-size:18px;
+}
+
+.bbsearch_buttonDefault{
+	width:auto;
+	height:30px;
+	padding:0 20px;
+	background-color:#FFF;
+	border: 1px solid #3696da;
+	font-family: 'roboto', verdana;
+	font-weight:400;
+	font-size:14px;
+	color:#3696da;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor:pointer;
+}
+#tile{
+	margin-bottom:10px;
+	padding-bottom:5px;
+	color:#3696da;
+	font-family: 'roboto', verdana;
+	font-weight:300;
+	font-size:18px;
+	text-transform:uppercase;
+	border-bottom: 1px solid #efefef;
+
+}
+#container_interna {
+	width:900px;
+	height:auto;
+	padding:20px;
+	margin-top:20px;
+	background-color:#FFF;
+	float:left;
+	border:1px solid #efefef;
+}

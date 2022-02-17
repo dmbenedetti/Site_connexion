@@ -1,0 +1,14 @@
+D:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.DataAccess.dll
+D:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.DataAccess.pdb
+D:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.Models.dll
+D:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.Models.pdb
+D:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.dll
+D:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.pdb
+D:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.csprojResolveAssemblyReference.cache
+E:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.DataAccess.dll
+E:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.DataAccess.pdb
+E:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.Models.dll
+E:\hospital_assuncao\HBrasil.DataAccess\bin\HBrasil.Models.pdb
+E:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.dll
+E:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.pdb
+E:\hospital_assuncao\HBrasil.DataAccess\obj\Debug\HBrasil.DataAccess.csprojResolveAssemblyReference.cache

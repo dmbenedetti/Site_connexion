@@ -1,0 +1,14 @@
+D:\hospital_assuncao\HAssuncao.Util\bin\HAssuncao.Util.dll
+D:\hospital_assuncao\HAssuncao.Util\bin\HAssuncao.Util.pdb
+D:\hospital_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.dll
+D:\hospital_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.pdb
+E:\hospital_assuncao\HAssuncao.Util\bin\HAssuncao.Util.dll
+E:\hospital_assuncao\HAssuncao.Util\bin\HAssuncao.Util.pdb
+E:\hospital_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.dll
+E:\hospital_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.pdb
+E:\hospital_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\bin\HAssuncao.Util.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\bin\HAssuncao.Util.pdb
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.csprojResolveAssemblyReference.cache
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.dll
+C:\Daniel\Hosp_assuncao\HAssuncao.Util\obj\Debug\HAssuncao.Util.pdb

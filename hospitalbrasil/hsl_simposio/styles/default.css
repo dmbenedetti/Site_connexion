@@ -1,0 +1,162 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding::0;
+	margin:0;
+	border:none;
+}
+.clear{
+	clear:both;
+	}
+@font-face {
+	font-family: 'Aller_Lt';
+	src: url('fonts/Aller_Lt.eot');
+	src: local('☺'), url('fonts/Aller_Lt.woff') format('woff'), url('fonts/Aller_Lt.ttf') format('truetype'), url('fonts/Aller_Lt.svg') format('svg');
+	/*font-weight: normal;
+	font-style: normal;*/
+}
+@font-face {
+	font-family: 'Aller_Bd';
+	src: url('fonts/Aller_Bd.eot');
+	src: local('☺'), url('fonts/Aller_Bd.woff') format('woff'), url('fonts/Aller_Bd.ttf') format('truetype'), url('fonts/Aller_Bd.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Aller_It';
+	src: url('fonts/Aller_It.eot');
+	src: local('☺'), url('fonts/Aller_It.woff') format('woff'), url('fonts/Aller_It.ttf') format('truetype'), url('fonts/Aller_It.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#geral{
+	background:url(../images/fundo_topo.gif) repeat-x top left;
+}
+#content{
+	width:950px;
+	margin:0 auto;
+}
+#topo{
+	padding:25px 0 0 0;
+	height:215px;
+}
+#inscricao{
+	padding-top:10px;
+	color:#FFF;
+	height:395px;
+
+}
+#inscricao #titulo{
+	font: 42px/47px "Aller_Lt";
+	padding-bottom:50px;
+}
+#inscricao #btn_inscricao{
+	float:right;
+	width:360px;
+	padding-top:40px;
+}
+#inscricao #p_data{
+	width:560px;
+	float:left;
+	padding-bottom:25px;
+	font: 28px "Aller_Lt";
+}
+#inscricao #p_data #data_simposio strong{
+	font-weight:bold;
+	font: 28px "Aller_Bd";
+	}
+#inscricao #p_data img{
+	float:left;
+	margin-right:15px;
+}
+
+#inscricao #p_local{
+	width:560px;
+	float:left;
+	font: 20px "Aller_Lt"
+}
+#inscricao #p_local #local_simposio strong{
+	font-weight:bold;
+	font: 28px "Aller_Bd";
+}
+#inscricao #p_local img{
+	float:left;
+	margin-right:15px;
+}
+#material_apoio{
+	padding-bottom:70px;
+	}
+#material_apoio h2{
+	font: 34px "Aller_Lt";
+	color:#005da1;
+	padding-bottom:5px;
+	background:url(../images/hr_tracejado.jpg) bottom repeat-x;
+	margin-bottom:40px;
+}
+
+.boxMaterial{
+	width:300px;
+	height:80px;
+	float:left;
+	margin-right:15px;
+	padding-bottom:30px;
+}
+.boxMaterial img{
+	float:left;
+	margin-right:8px;
+	padding-top:15px;
+	padding-bottom:20px;
+}
+.boxMaterial h3{
+	font: 18px "Aller_Bd";
+	color:#005da1;
+}
+.boxMaterial p{
+	font: 14px "Aller_Lt";
+	color:#666666;
+}
+.boxMaterial a{
+	font: 14px "Aller_It";
+	color:#cc6666;
+}
+#footerContent{
+	background:url(../images/hr_sombreado.jpg) top repeat-x;
+	padding-top:70px;
+}
+#footerContent #patrocionio{
+	width:950px;
+	margin:0 auto;
+}
+#footerContent #textFooter{
+	width:950px;
+	height:90px;
+	margin:0 auto;
+	background:#005da1;
+	color:#FFF;
+}
+#footerContent #textFooter p{
+	font: bold 20px "Aller_Lt";
+}
+#footerContent #textFooter p strong{
+	font: 14px "Aller_Bd";
+}
+#footerContent #textFooter #presidente{
+	float:left;
+	width:125px;
+	padding:25px 64px 30px 25px;
+}
+#footerContent #textFooter #comissao{
+	float:left;
+	width:660px;
+	font:16px "Aller_Lt";
+	padding:15px 0 0 15px;
+}
+#footerContent #copyright{
+	clear:both;
+	font:16px "Aller_Lt";
+	color:#005da1;
+	width:950px;
+	margin:0 auto;
+	padding:30px 0;
+}

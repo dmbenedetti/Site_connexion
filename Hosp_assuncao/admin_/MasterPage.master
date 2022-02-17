@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="admin_MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Área restrita</title>
+    <style>
+*{
+border:0;
+padding:0;
+margin:0;
+}
+body{
+font:12px Arial, Helvetica, sans-serif;
+color:#333333;
+}
+#geral{
+width:100%;
+}
+#topo{
+height:95px;
+background:url(images/bck_barra_topo.jpg) bottom left repeat-x;
+margin:0 0 3px 0;
+}
+#logo{
+float:left;
+width:190px;
+height:60px;
+}
+#user{
+float:right;
+margin:15px 20px 0 0;
+width:240px;}
+#msg_saudacao{
+clear:both;
+display:block;
+padding:15px 0 0 10px;
+}
+#btn_sair{
+float:right;
+padding:0 5px 0 15px;}
+#menu_left{
+width:190px;
+margin:0;
+padding:5px;
+bottom:0;
+}
+#conteudo{
+position:absolute;
+width:99.9%;
+height:88.5%;}
+#conteudo_right{
+padding:10px;
+}
+#menu_left ul li{
+list-style:none;
+margin:10px 5px;
+}
+#menu_left ul li a{
+color:#666666;
+text-decoration:none;}
+#novo_item
+{
+text-align:right;
+border-top: solid 1px #FF9933;
+width:600px;
+margin:10px 0 ; 
+}
+#novo_item a
+{
+font:12px arial, verdana, tahoma;
+text-decoration:none;
+color:#0066FF;
+}
+.txt
+{
+    border:solid 1px #333;
+    }               
+/***************************************/
+/**Menu Acordion**/
+.accordionHeader
+{
+/*border: 1px solid #ccc;*/
+color: #666;
+/*background-color: #f2f2f2;*/
+background:url(images/bck_btn_menu.gif) repeat-x top left;
+font-family: Arial, Sans-Serif;
+font-size: 12px;
+font-weight: bold;
+padding: 5px;
+margin-top: 5px;
+cursor: pointer;
+}
+.accordionHeaderSelected
+{
+border: 1px solid #ccc;
+color: white;
+background-color: #ccc;
+font-family: Arial, Sans-Serif;
+font-size: 12px;
+font-weight: bold;
+padding: 5px;
+margin-top: 5px;
+cursor: pointer;
+}
+.accordionContent
+{
+background-color: #fff;
+border: 1px solid #cccccc;
+padding: 5px;
+padding-top: 10px;
+}
+/***************************************/
+</style>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="geral">
+	<!--Topo-->
+	<div id="topo">
+		<div id="logo">
+			<img src="images/logo.jpg" />
+		</div>
+		<div id="user">
+			<div id="btn_sair">
+                <asp:ImageButton ID="ImageButton1" runat="server" 
+                    ImageUrl="images/btn_sair.jpg" onclick="ImageButton1_Click" /></div>
+			<p>Olá <strong>
+                <asp:Label ID="lbl_nome" runat="server" Text=""></asp:Label></strong></p>
+		</div>
+		<div id="msg_saudacao">
+			<p>Você está na administração de conteúdo do site. </p>
+		</div>
+	</div>
+	<!--Fim do Topo-->
+	<!-- conteudo-->
+	<div id="conteudo">
+	<table width="100%" cellspacing="3px" height="100%">
+		<tr>
+			<td width="200" valign="top" align="left" style="border:solid 1px #CCCCCC;"  valign="top" align="left">
+				<!--Menu Left-->
+				<div id="menu_left">
+                    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                    </asp:ToolkitScriptManager>
+                    <ul>
+		                <li <% =paginas %>><a href="home.aspx">» Gerenciar Home</a></li>
+		                <li <% =paginas %>><a href="paginas.aspx">» Gerenciar páginas</a></li>
+		                <li <% =paginas %>><a href="galerias.aspx">» Gerenciar galerias</a></li>
+		                <li <% =paginas %>><a href="noticias.aspx">» Gerenciar notícias</a></li>
+		                <li><a href="#">» Gerenciar Fotos Bebê</a>
+		                    <li <% =paginas %>>&nbsp;&nbsp;&nbsp;<a href="Fotobb_texto.aspx" >» Gerenciar Texto</a></li>
+		                    <li <% =fotosbb %>>&nbsp;&nbsp;&nbsp;<a href="Fotobb_fotos.aspx" >» Gerenciar Fotos</a></li>
+		                </li>
+		                <li <% =paginas %>><a href="SuaSaude.aspx">» Gerenciar Revista SuaSaude</a>
+		                    <li <% =paginas %>><a href="SuaSaude_texto.aspx">» Gerenciar Texto Revista SuaSaude</a></li>
+		                </li>
+		                <li <% =user_adm %>><a href="user.aspx">» Gerenciar Usuários</a></li>
+	                </ul>
+                    
+					
+				</div>
+				<!-- Fim do Menu Left-->
+			</td>
+			<td bordercolor="#CCCCCC" style="border:solid 1px #CCCCCC;"  valign="top" align="left">
+				<!-- conteudo_right-->
+				<div id="conteudo_right">
+				
+				<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                 </asp:ContentPlaceHolder>
+                 
+				</div>
+				<!--Fim conteudo_right-->
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="background:#E9E9E9; border:solid 1px #CCCCCC;" height="20px;">
+					<p>Desenvolvido por Connexion Net</p>
+			</td>
+		</tr>
+	</table>
+		
+		
+		
+	</div>
+	<!-- Fim do conteudo-->
+	
+</div>
+</form>
+</body>
+</html>

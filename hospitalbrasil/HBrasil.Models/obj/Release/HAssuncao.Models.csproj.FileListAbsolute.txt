@@ -1,0 +1,4 @@
+D:\hospital_assuncao\HBrasil.Models\bin\HBrasil.Models.dll
+D:\hospital_assuncao\HBrasil.Models\bin\HBrasil.Models.pdb
+D:\hospital_assuncao\HBrasil.Models\obj\Release\HBrasil.Models.dll
+D:\hospital_assuncao\HBrasil.Models\obj\Release\HBrasil.Models.pdb

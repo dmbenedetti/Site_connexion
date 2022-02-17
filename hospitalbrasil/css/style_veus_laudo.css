@@ -1,0 +1,451 @@
+﻿select.preparo {
+	width: 199px;
+	font-family: Verdana;
+	font-size: 9px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	height: 14px;
+	}
+
+input.ddd {
+	width: 30px;
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	BORDER: 1px solid Black;
+}
+
+input.preparo {
+	width: 170px;
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	BORDER: 1px solid Black;
+}
+
+input.preparo3 {
+	width: 470px;
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	BORDER: 1px solid Black;
+}
+
+select.preparo2 {
+	width: 510px;
+	font-family: Verdana;
+	font-size: 9px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	height: 170px;
+	border: 1px solid Black;
+	}
+
+input.botao_cinza	{
+	color: #ffffff;
+	background-color:#d6d6d6;
+	font-family: Verdana, Arial, helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	width: 20px;
+	height: 13px;
+	vertical-align: text-top;
+}
+
+td.titulo_grupo {
+	background-color: #BFBFBF;
+	font: Verdana;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FFFFFF;
+	BORDER-BOTTOM: 2px solid Black;
+	height: 30px;
+}
+textarea.anotacao_laudo {
+	color: #525455;
+	height: 220px;
+	width: 430px;
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-align: left;
+	border: 1px solid #CBCCC6;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+A.grupos {
+    FONT-SIZE: 8px;
+    FONT-FAMILY: verdana;
+    text-decoration:none;
+    FONT-WEIGHT: normal;
+    COLOR: #406305;
+    }
+
+A.grupos:hover {
+	text-decoration: underline;
+	color: #Ffbe33;
+   }
+
+input.novo {
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	BORDER: 1px solid Black;
+}
+
+#texto5
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#texto_operadoras1
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 10px;
+	text-decoration: none;
+}
+
+#texto_operadoras2
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#texto_operadoras3
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 12px;
+	text-decoration: none;
+	color: Orange;
+}
+
+td.fio_vert {
+	background: url(../imagens/vl_fio_vert.gif) repeat-y;
+}
+
+td.titulo_novo {
+	background-color: #d6d6d6;
+	font: Verdana;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	BORDER-BOTTOM: 2px solid Black;
+}
+
+td.rodape_novo {
+	background-color: #E7E7E7;
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+}
+
+td.linha_novo {
+	font: Verdana;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	background-color: #ffffff;
+	BORDER-BOTTOM: 1px solid Black;
+}
+
+
+A.veus_laudo {
+    FONT-SIZE: 9px;
+    FONT-FAMILY: verdana;
+    text-decoration:none;
+    FONT-WEIGHT: normal;
+    COLOR: #406305;
+    }
+
+A.veus_laudo:hover {
+	text-decoration: underline;
+	color: #Ffbe33;
+   }
+
+A.link_novo_close {
+    FONT-SIZE: 9px;
+    FONT-FAMILY: verdana;
+    text-decoration:none;
+    FONT-WEIGHT: bold;
+    COLOR: #406305;
+    }
+
+A.link_novo_close:hover {
+	text-decoration: underline;
+	color: #Ffbe33;
+   }
+
+A.link_novo_open {
+    FONT-SIZE: 9px;
+    FONT-FAMILY: verdana;
+    text-decoration:none;
+    FONT-WEIGHT: normal;
+    COLOR: #406305;
+    }
+
+A.link_novo_open:hover {
+	text-decoration: underline;
+	color: #Ffbe33;
+   }
+
+
+li.lista {
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	color: #525455;
+	text-transform: none;
+	list-style: outside url(../imagens/site_bullet.gif);
+	list-style-position: outside;
+	white-space: normal;
+	padding-left: 0px;
+	}
+
+p.veus_laudo {
+	position:relative;
+	font-family: "Trebuchet MS";
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #Ffbe33;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+	padding: 1px 5px;
+	}
+
+.veus_laudo a {
+	font: 12px Trebuchet MS;
+	text-decoration: none;
+	text-align: center;
+	margin-right:-1px;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+	color: #Ffbe33;
+	font-weight: bold;
+  	}
+
+  .veus_laudo a:hover {
+	  color: #808082;
+	  background: #FFFFFF;
+	  }
+
+  .veus_laudo a span {
+	  display:none;
+	  }
+
+  .veus_laudo a:hover span {
+	display: block;
+	position: static;
+	top: 20px;
+	width: 710px;
+	height: 180px;
+	background:#ececec;
+	font-size: 12px;
+	border:1px none #87a46e;
+	text-align:left;
+	font-family: Verdana;
+	font-size: 10px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	color: #525455;
+	text-transform: none;
+	line-height: 16px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	}
+
+table.veus_laudo_titulo_01 {
+	 COLOR: #7a7a7a;
+    BACKGROUND: #d6d6d6;
+    BORDER-TOP: 1px solid #b3b3b3;
+    BORDER-LEFT: 1px solid #b3b3b3;
+    BORDER-BOTTOM: 1px solid #b3b3b3;
+    BORDER-RIGHT: 1px solid #b3b3b3;
+    FONT: 12px Verdana;
+    FONT-WEIGHT: bold;
+    }
+
+table.veus_laudo_01 {
+    BORDER-TOP: 1px solid #87a46e;
+    BORDER-LEFT: 1px solid #87a46e;
+    BORDER-BOTTOM: 1px solid #87a46e;
+    BORDER-RIGHT: 1px solid #87a46e;
+    FONT: 10px Verdana;
+    FONT-WEIGHT: Normal;
+    COLOR: #395e01;
+    }
+
+#tr_veus_laudo_header_01 {
+    BACKGROUND: #d6d6d6;
+    BORDER-BOTTOM: 1px solid #d6d6d6;
+    FONT: 11px Verdana;
+    FONT-WEIGHT: Bold;
+    COLOR: #747474;
+    }
+
+#td_veus_laudo_header_01 {
+    BORDER-RIGHT: 1px solid #88a56d;
+    }
+
+#tr_veus_laudo_corpo_01 {
+    BACKGROUND: #ececec;
+    BORDER-BOTTOM: 1px solid #88a56d;
+    }
+
+#tr_veus_laudo_corpo_02 {
+    BACKGROUND: #FFFFFF;
+    BORDER-BOTTOM: 1px solid #88a56d;
+    }
+
+
+.box {
+    PADDING-LEFT: 20px;
+    PADDING-BOTTOM: 8px;
+    PADDING-TOP: 8px
+}
+.campo {
+    BORDER-RIGHT: #ccccc5 1px solid;
+    PADDING-RIGHT: 5px;
+    BORDER-TOP: #ccccc5 1px solid;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 2px;
+    FONT: bold 9px arial;
+    BORDER-LEFT: #ccccc5 1px solid;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #ccccc5 1px solid;
+    BACKGROUND-COLOR: #fff
+    }
+
+td.verdana {
+    FONT: 10px verdana;
+    }
+td.veus_laudo_titulo_01 {
+	COLOR: #ffffff;
+    FONT: 12px Verdana;
+    FONT-WEIGHT: bold;
+    }
+
+
+
+P.verdana {
+    FONT-SIZE: 10px;
+    FONT-FAMILY: verdana;
+    TEXT-DECORATION:none;
+    FONT-WEIGHT: normal;
+    COLOR: #000000;
+    }
+
+input.botao {
+    color: #ffffff;
+    background-color: Orange;
+    font-family: Verdana;
+    font-size: 10px;
+    font-weight: bold;
+    }
+
+td.veus_laudo_02 {
+    FONT: 10px Verdana;
+    FONT-WEIGHT: normal;
+    COLOR: #000000;
+    }
+
+BODY {
+background-color: #FFFFFF;
+}
+
+TD {
+color: #000000;
+font-family: Arial;
+font-size: 10px;
+line-height: 12px;
+}
+
+TD.celula_sim {
+color: #000000;
+font-family: Arial;
+font-size: 10px;
+line-height: 10px;
+}
+
+A {
+color: #F7B321;
+font-weight: bold;
+}
+
+A.dropMenu {font-family: Verdana; font-size: 9px; color:#666; font-weight: normal; text-decoration:none;}
+A.dropMenu:hover {color:#F7B321; text-decoration:underline;}
+
+A.menuSaude {font-family: Verdana; font-size: 9px; color:#666; font-weight: normal; text-decoration:none;}
+A.menuSaude:hover {color:#99CC33;}
+
+A.menuFinan {font-family: Verdana; font-size: 9px; color:#666; font-weight: normal; text-decoration:none;}
+A.menuFinan:hover {color:#CF3829;}
+
+.box{
+padding: 7 14 0 14px;
+}
+
+.titulo {
+color: #FFFFFF;
+font-family: Trebuchet MS;
+font-size: 13px;
+font-weight: bold;
+letter-spacing: 0px;
+}
+
+.titulo2 {
+color: #B2B2A7;
+font-family: Trebuchet MS;
+font-size: 18px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.titulo3 {
+color: #666;
+font-family: Verdana;
+font-size: 9px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.campo {
+font: 9px arial;
+font-weight: bold;
+background-color:#FFF;
+border: 1px solid #CCCCC5;
+padding: 2 5 2 5px;
+}
+
+.campo2 {
+font: 12px arial;
+background-color:#FFF;
+border: 1px solid #CCCCC5;
+padding: 2 5 2 5px;
+}

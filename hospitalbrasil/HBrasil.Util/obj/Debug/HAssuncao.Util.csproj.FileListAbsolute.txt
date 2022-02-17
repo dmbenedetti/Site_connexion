@@ -1,0 +1,8 @@
+D:\hospital_assuncao\HBrasil.Util\bin\HBrasil.Util.dll
+D:\hospital_assuncao\HBrasil.Util\bin\HBrasil.Util.pdb
+D:\hospital_assuncao\HBrasil.Util\obj\Debug\HBrasil.Util.dll
+D:\hospital_assuncao\HBrasil.Util\obj\Debug\HBrasil.Util.pdb
+E:\hospital_assuncao\HBrasil.Util\bin\HBrasil.Util.dll
+E:\hospital_assuncao\HBrasil.Util\bin\HBrasil.Util.pdb
+E:\hospital_assuncao\HBrasil.Util\obj\Debug\HBrasil.Util.dll
+E:\hospital_assuncao\HBrasil.Util\obj\Debug\HBrasil.Util.pdb
